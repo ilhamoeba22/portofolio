@@ -1,0 +1,135 @@
+# 1. HALAMAN BERANDA (*HERO SECTION*)
+*Bagian ini adalah hal pertama yang dilihat pengunjung. Harus singkat, kuat, dan meninggalkan kesan mendalam.*
+
+*   **Nama Tampilan:** Muhammad Ilham Pratama
+*   **Gelar Profesional:** IT Specialist & Backend Engineer
+*   **Tagline Utama:** *"Driving Digital Transformation through Scalable Solutions"*
+*   **Ringkasan Singkat (Sub-headline):** "Saya merekayasa sistem digital yang tidak hanya memecahkan tantangan saat ini tetapi juga membuka kemungkinan di masa depan—memberdayakan bisnis, menginspirasi inovasi, dan meninggalkan dampak jangka panjang di lanskap digital."
+*   **Call-to-Action (Tombol):** `[Jelajahi Portofolio]` & `[Hubungi Saya]`
+*   **Informasi Kontak Cepat:** 
+    *   Email: muhammad.ilham.yk@gmail.com
+    *   LinkedIn: linkedin.com/in/m-ilhampratama
+    *   Lokasi: Sleman, Yogyakarta, Indonesia
+    *   Telepon/WA: 0895390069595
+
+---
+
+# 2. HALAMAN TENTANG SAYA (*ABOUT ME*)
+*Gunakan narasi profesional yang mendalam untuk menunjukkan filosofi dan dedikasi Anda terhadap teknologi.*
+
+**Biografi Profesional:**
+"Saya adalah seorang *Backend Engineer* dan *Web Developer* yang didorong oleh semangat mendalam untuk menciptakan solusi digital yang dapat diskalakan (*scalable*), aman, dan transformatif. Dengan fondasi yang kuat dalam rekayasa *backend* dan visi yang jelas untuk transformasi digital, saya memiliki spesialisasi dalam mengubah kompleksitas operasional menjadi sistem yang mulus dan berkelanjutan.
+
+Bagi saya, teknologi jauh melampaui sekadar deretan kode—teknologi adalah jembatan penghubung antara manusia, entitas bisnis, dan inovasi. Setiap baris kode yang saya tulis tidak hanya dipandu oleh presisi teknis, tetapi juga oleh keyakinan bahwa sistem yang hebat harus mampu memberdayakan pengguna, memfasilitasi pengambilan keputusan yang lebih cerdas, dan mengakselerasi pertumbuhan organisasi.
+
+Baik itu mengotomatisasi alur kerja manual, mengembangkan platform berskala *enterprise* untuk perbankan, maupun mengoptimalkan proses bisnis, saya selalu melihat setiap proyek sebagai peluang untuk menciptakan nilai yang bermakna. Pendekatan saya berlabuh pada rasa ingin tahu, kemampuan beradaptasi, dan kolaborasi tim. Saya percaya bahwa sistem yang paling berdampak dibangun di persimpangan antara visi dan eksekusi—di mana keunggulan teknis bertemu dengan tujuan organisasi."
+
+---
+
+# 3. KEAHLIAN TEKNIS & PROFESIONAL (*COMPREHENSIVE SKILLS*)
+*Buat bagian ini sangat detail, menggunakan ikon atau diagram batang persentase untuk visualisasi di website Anda.*
+
+**A. Domain & Keahlian Inti (*Top Core Skills*)**
+*   **Banking & Sharia Banking IT Systems:** Pemahaman mendalam terkait operasional perbankan, kepatuhan pelaporan OJK, *Core Banking System* (CBS), dan transparansi finansial.
+*   **Digital Transformation:** Mengotomatisasi alur kerja manual menjadi ekosistem *paperless*.
+*   **Performance Optimization & Scalability:** Membangun kueri basis data untuk laporan masif dan mengoptimalkan sistem dengan lalu lintas tinggi.
+
+**B. *Backend Development & Frameworks***
+*   **PHP & Laravel (Versi 11):** Menguasai arsitektur MVC, Eloquent ORM, Middleware, perutean terenkripsi (*secure routing*), dan pengelolaan API.
+*   **Java:** Pemrograman Berorientasi Objek (OOP), *Control Flow, Collection Types*, dan *Common Classes* (Bersertifikasi Dicoding).
+*   **RESTful API Integration:** Membangun jalur komunikasi data *real-time* yang aman antar sistem (*Middleware Core Banking*).
+
+**C. *Frontend Development & UI/UX***
+*   **Vue.js 3 & Vite:** Membangun *Single Page Application* (SPA) yang sangat responsif, reaktif, dan tanpa jeda muat (*lag-free*).
+*   **TALL Stack (FilamentPHP v3):** Penguasaan *Tailwind CSS, Alpine.js, Laravel,* dan *Livewire* untuk merancang Dasbor Administrator (*CMS/Backend Panel*) berskala *enterprise* dengan cepat dan elegan.
+*   **HTML, CSS, Bootstrap & Blade Template:** Merancang antarmuka *Responsive Web Design* (RWD) yang adaptif untuk segala gawai.
+
+**D. *Database Management***
+*   **MySQL & PostgreSQL:** Perancangan arsitektur basis data relasional, manajemen migrasi, struktur tabel operasional (*Header-Detail*), dan manajemen relasi *One-to-Many/Many-to-Many*.
+*   **Read-Only Immutable Database:** Pengalaman menghubungkan dan mengekstraksi data dari *Legacy Core Banking* berskala masif dengan parameter keamanan *read-only*.
+
+**E. *Tools & Libraries* Lanjutan**
+*   **FPDF & DOMPDF:** Manipulasi tingkat rendah (*low-level*) untuk mencetak data presisi absolut di atas *form* cetak fisik dan pembuat laporan analitik bereferensi *QR Code*.
+*   **Laravel-Excel:** Mengekstraksi ratusan ribu baris data finansial (*Bulk Export*) ke *Spreadsheet* untuk kebutuhan auditor.
+*   **Spatie Permission:** Pengaturan Kontrol Akses Berbasis Peran (*Role-Based Access Control*) yang sangat ketat.
+
+**F. *Soft Skills* & Manajemen Proyek**
+*   **Agile Methodology & Execution:** Bersertifikasi.
+*   **Quality Assurance (UAT):** Pengujian sistem sebelum *deployment*.
+*   **Effective Communication & Powerful Delivery:** Komunikasi tim dan presentasi korporat bersertifikasi.
+
+---
+
+# 4. PENGALAMAN KERJA (*WORK EXPERIENCE*)
+*Tampilkan dalam bentuk Timeline (Garis Waktu).*
+
+*   **PT BPRS HIK MCI | IT Specialist, MIS & Product Development (Okt 2024 - Sekarang)**
+    *   Memimpin inisiatif transformasi digital perbankan dari proses manual menjadi solusi berbasis sistem mandiri (*in-house*).
+    *   Merekayasa dan meluncurkan berbagai aplikasi vital perbankan (*The Procurement, The Evidence, Mesin Antrean SPA, Portal CMS, RIPLAY*).
+    *   Melakukan integrasi API CBSIBA, peluncuran WhatsApp Blast, pembaharuan Sistem Kepegawaian (Simpeg), dan menjaga kelancaran operasional pelaporan OJK.
+*   **PT. JIM | Freelance Full Stack Developer (Apr 2024 - Mei 2024)**
+    *   Membangun dari awal dan mengoptimalkan website perusahaan dengan *traffic* tinggi.
+    *   Merekayasa arsitektur basis data MySQL untuk sistem manajemen konten yang *scalable* guna mendukung lonjakan kebutuhan operasional.
+*   **PT Baracipta Esa Engineering | Full Stack Developer - MSIB Kampus Merdeka Batch 5 (Ags 2023 - Des 2023)**
+    *   Mentransformasi layanan digital *platform* melalui perancangan sistem terintegrasi dengan RESTful API.
+    *   Memimpin fase *User Acceptance Testing* (UAT) dan meraih evaluasi skor penuh (*100 points*) pada integrasi API dan RWD.
+*   **ECC.co.id | Full Stack Developer Intern (Ags 2023 - Des 2023)**
+    *   Mempelopori pengembangan platform *Online Personal Assessment* dengan memanfaatkan database PostgreSQL untuk *storage* efisien.
+*   **SEAL (Sosial Ekonomi Akselerator Lab) | Full Stack Developer Intern (Ags 2022 - Des 2022)**
+    *   Merancang transformasi digital bagi sektor publik dan pemerintah dengan menyatukan beragam sumber data menjadi satu *dashboard* utuh. Meraih penghargaan *Finalist Demo Day* dan *Best Team*.
+*   **ParagonCorp | IT Support Technician (Ags 2019 - Jul 2020)**
+    *   Menjadi tulang punggung keandalan infrastruktur IT korporat, melakukan *troubleshooting* jaringan, pemeliharaan *hardware/software*, dan optimasi keamanan.
+
+---
+
+# 5. PORTFOLIO PROYEK MAHAKARYA (*THE MASTERPIECES*)
+*Ini adalah bagian penjualan utama Anda (Selling Point). Tampilkan screenshot dasbor yang elegan dari aplikasi-aplikasi ini (jika ada), dan jabarkan kerumitannya.*
+
+**1. BPRS Front Office System (Kiosk Antrean & E-Form)**
+*   **Deskripsi:** Merevolusi ruang tunggu bank menjadi ekosistem digital penuh. Sistem ini menggabungkan anjungan layar sentuh (*Kiosk*) bagi nasabah untuk mengisi *E-Formulir* transaksi (Setor, Tarik, Transfer), yang kemudian terintegrasi langsung ke panel *Teller* secara *real-time*.
+*   **Fitur Utama:** Panel *Teller* berbasis SPA tanpa jeda (*lag-free*), pemanggilan otomatis ke layar TV *(Voice Notification)*, dan generator cetak FPDF murni yang secara absolut menimpa kertas slip fisik di loket.
+*   **Tech Stack:** Laravel 11, Vue.js 3 (Vite), Bootstrap, FPDF, Middleware API Integration.
+
+**2. BPRS Procurement System (Sistem Pengadaan Digital)**
+*   **Deskripsi:** Sistem perencana sumber daya perusahaan berskala *enterprise* untuk mengatur alur pengadaan barang, jasa, dan pencairan dana operasional. Menghancurkan birokrasi kertas menjadi rekam jejak digital yang tidak bisa dimanipulasi.
+*   **Fitur Utama:** Mesin persetujuan berjenjang (*Multi-tier Approval Engine*), deteksi *Limit of Authority* otomatis hingga jajaran Direksi, pencatatan survei perbandingan kompetitor, validasi anggaran *Budgeting*, dan cetak Surat Perintah Membayar berlapis otentikasi *QR Code* anti-pemalsuan.
+*   **Tech Stack:** Laravel 11, FilamentPHP v3 (TALL Stack), MySQL, DOMPDF, Spatie Permissions.
+
+**3. Website Portal Utama BPRS & Content Management System (CMS)**
+*   **Deskripsi:** Portal interaktif publik perbankan terpadu dan mesin penggerak konten dinamis yang merespons perubahan regulasi dan kebutuhan pasar dengan cepat.
+*   **Fitur Utama:** Kalkulator simulasi bagi-hasil deposito *real-time* berbasis algoritma basis data, laman transparansi laporan keuangan berformat PDF, manajer literasi finansial korporat, dan perlindungan keamanan ekstra terhadap unggahan injeksi *script* (*XSS/CSRF Protection*).
+*   **Tech Stack:** Laravel 11, FilamentPHP v3, Bootstrap, OwlCarousel, Arsitektur *Read-Optimized*.
+
+**4. The Evidence (Legacy Core Banking Archive Extractor)**
+*   **Deskripsi:** Perangkat lunak forensik pengarsipan data historis yang membedah dan menyelamatkan riwayat finansial nasabah dari *Core Banking System* (CBS) warisan vendor lama tanpa membebani sistem CBS yang baru beroperasi.
+*   **Fitur Utama:** Mode keamanan nir-modifikasi (*Read-Only Immutable*), ekstraksi ratusan ribu baris Buku Besar, Laba Rugi, dan Rekening Koran nasabah ke dalam wujud lembar komputasi Excel maupun dokumen cetak protable (PDF).
+*   **Tech Stack:** Laravel 11, Bootstrap, SB Admin 2, Laravel-Excel, Snappy/DOMPDF, *Air-Gapped Compliance Ready*.
+
+**5. BPRS RIPLAY System (Portal Transparansi OJK)**
+*   **Deskripsi:** Direktori kepatuhan perbankan tersentralisasi yang diformulasikan untuk memenuhi kewajiban hukum Otoritas Jasa Keuangan terkait Ringkasan Informasi Produk dan Layanan perbankan.
+*   **Fitur Utama:** Dasbor perutean terenkripsi (*Secure Routing*), sanitasi mutasi unggahan file untuk memproteksi server dari *Malicious Payload Injection*, dan arsitektur *frontend* yang berorientasi pada beban baca berat (*Read-Heavy Optimization*).
+*   **Tech Stack:** Laravel 11, FilamentPHP v3, Blade Template Engine, MySQL.
+
+---
+
+# 6. PENDIDIKAN & SERTIFIKASI (*EDUCATION & CERTIFICATIONS*)
+*   **Sarjana Komputer (S1) Informatika** 
+    Universitas Teknologi Digital Indonesia (Sep 2020 - Feb 2024)
+*   **Sertifikasi Kompetensi Profesional:**
+    *   **Memulai Pemrograman Dengan Java** - *Dicoding Academy* (Valid hingga Jan 2027)
+    *   **Agile Execution** - *PT Baracipta Esa Engineering*
+    *   **Effective Communication** - *PT Baracipta Esa Engineering*
+    *   **Powerful Delivery** - *PT Baracipta Esa Engineering*
+    *   **AWS Academy Cloud Associate**
+    *   **Magang dan Studi Independen Bersertifikat (MBKM)** - Full Stack Developer
+
+---
+
+# 7. KONTAK SAYA (*CONTACT & COLLABORATION*)
+*Gunakan form yang terintegrasi langsung ke email.*
+
+*   "Mari berkolaborasi untuk merancang transformasi digital Anda selanjutnya."
+*   **Email:** muhammad.ilham.yk@gmail.com
+*   **LinkedIn:** linkedin.com/in/m-ilhampratama
+*   **WhatsApp:** 0895390069595
+*   *(Tambahkan formulir input: Nama, Email, Subjek, Pesan, dan Tombol "Kirim Pesan").*

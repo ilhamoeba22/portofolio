@@ -2,27 +2,36 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
-import { slideInFromTop } from "@/lib/motion";
+import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/lib/motion";
+
+import { useLanguage } from "@/context/LanguageContext";
 
 export const Encryption = () => {
+  const { t } = useLanguage();
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full -z-20">
-      <div className="absolute w-auto h-auto top-0 z-[5]">
+    <section ref={ref} className="flex flex-col relative items-center justify-center min-h-screen w-full h-full">
+      <motion.div
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="w-full flex flex-col items-center z-[5]"
+      >
+        {/* Title */}
         <motion.div
           variants={slideInFromTop}
-          className="text-[40px] font-medium text-center text-gray-200"
+          className="text-[40px] font-medium text-center text-gray-200 mb-6"
         >
-          Performance{" "}
+          {t("domain_title").split(" ").slice(0, 2).join(" ")}{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-            &
-          </span>{" "}
-          security.
+            {t("domain_title").split(" ").slice(2).join(" ")}
+          </span>
         </motion.div>
-      </div>
 
-      <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
-        <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
+        {/* Lock icon preserved from template */}
+        <div className="flex flex-col items-center group cursor-pointer w-auto h-auto mb-6">
           <Image
             src="/lock-top.png"
             alt="Lock top"
@@ -39,17 +48,68 @@ export const Encryption = () => {
           />
         </div>
 
-        <div className="Welcome-box px-[15px] py-[4px] z-[20] border my-[20px] border-[#7042F88B] opacity-[0.9]">
-          <h1 className="Welcome-text text-[12px]">Encryption</h1>
+        <div className="Welcome-box px-[15px] py-[4px] z-[20] border mb-10 border-[#7042F88B] opacity-[0.9]">
+          <h1 className="Welcome-text text-[12px]">{t("domain_subtitle")}</h1>
         </div>
-      </div>
 
-      <div className="absolute z-[20] bottom-[10px] px-[5px]">
-        <div className="cursive text-[20px] font-medium text-center text-gray-300">
-          Secure your data with end-to-end encryption.
+        {/* Domain cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1000px] px-6 z-[20]">
+          <motion.div
+            variants={slideInFromLeft(0.5)}
+            className="p-6 rounded-lg border border-[#7042f88b] bg-[#0300148a] backdrop-blur-sm"
+          >
+            <h3 className="text-lg font-bold text-white mb-3">{t("domain_sharia_title")}</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {t("domain_sharia_p")}
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={slideInFromTop}
+            className="p-6 rounded-lg border border-[#7042f88b] bg-[#0300148a] backdrop-blur-sm"
+          >
+            <h3 className="text-lg font-bold text-white mb-3">{t("domain_digital_title")}</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {t("domain_digital_p")}
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={slideInFromRight(0.5)}
+            className="p-6 rounded-lg border border-[#7042f88b] bg-[#0300148a] backdrop-blur-sm"
+          >
+            <h3 className="text-lg font-bold text-white mb-3">{t("domain_security_title")}</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {t("domain_security_p")}
+            </p>
+          </motion.div>
         </div>
-      </div>
 
+        {/* Row 2: Design Thinking & Design Sprint */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[700px] px-6 z-[20] mt-6">
+          <motion.div
+            variants={slideInFromLeft(0.7)}
+            className="p-6 rounded-lg border border-[#7042f88b] bg-[#0300148a] backdrop-blur-sm"
+          >
+            <h3 className="text-lg font-bold text-white mb-3">{t("domain_thinking_title")}</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {t("domain_thinking_p")}
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={slideInFromRight(0.7)}
+            className="p-6 rounded-lg border border-[#7042f88b] bg-[#0300148a] backdrop-blur-sm"
+          >
+            <h3 className="text-lg font-bold text-white mb-3">{t("domain_sprint_title")}</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {t("domain_sprint_p")}
+            </p>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Background video */}
       <div className="w-full flex items-start justify-center absolute">
         <video
           loop
@@ -62,6 +122,6 @@ export const Encryption = () => {
           <source src="/videos/encryption-bg.webm" type="video/webm" />
         </video>
       </div>
-    </div>
+    </section>
   );
 };

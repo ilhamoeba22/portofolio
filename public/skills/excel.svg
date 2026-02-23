@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <path d="M55.44 8H40.56L0 17.6V78.4L40.56 88H55.44V72H80V24H55.44V8Z" fill="#217346"/>
+  <path d="M80 24H55.44V72H80V24Z" fill="#33C481"/>
+  <path d="M55.44 24H80V32H55.44V24Z" fill="#107C41"/>
+  <path d="M55.44 32H68V40H55.44V32Z" fill="#21A366"/>
+  <path d="M68 32H80V40H68V32Z" fill="#33C481"/>
+  <path d="M55.44 40H68V48H55.44V40Z" fill="#107C41"/>
+  <path d="M68 40H80V48H68V40Z" fill="#21A366"/>
+  <path d="M55.44 48H68V56H55.44V48Z" fill="#21A366"/>
+  <path d="M68 48H80V56H68V48Z" fill="#33C481"/>
+  <path d="M55.44 56H68V64H55.44V56Z" fill="#107C41"/>
+  <path d="M68 56H80V64H68V64Z" fill="#21A366"/>
+  <path d="M55.44 64H80V72H55.44V64Z" fill="#107C41"/>
+  <text x="22" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="bold" font-size="30" fill="#fff">X</text>
+</svg>

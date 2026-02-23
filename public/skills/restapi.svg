@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="20" fill="#4CAF50"/>
+  <path d="M30 44h68v8H30zm0 16h48v8H30zm0 16h58v8H30z" fill="#fff" opacity="0.9"/>
+  <path d="M92 72c0-8.8 7.2-16 16-16v32c-8.8 0-16-7.2-16-16z" fill="#fff" opacity="0.7"/>
+  <circle cx="108" cy="72" r="6" fill="#4CAF50"/>
+  <text x="64" y="108" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="18" fill="#fff">API</text>
+</svg>

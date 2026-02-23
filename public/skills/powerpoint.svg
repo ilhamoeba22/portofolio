@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <path d="M55.44 8H40.56L0 17.6V78.4L40.56 88H55.44V72H80V24H55.44V8Z" fill="#C43E1C"/>
+  <path d="M80 24H55.44V72H80V24Z" fill="#FF8F6B"/>
+  <path d="M55.44 24H80V48H55.44V24Z" fill="#ED6C47"/>
+  <path d="M55.44 48H80V72H55.44V48Z" fill="#C43E1C"/>
+  <rect x="60" y="32" width="16" height="16" rx="2" fill="#fff" opacity="0.5"/>
+  <text x="22" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="bold" font-size="30" fill="#fff">P</text>
+</svg>

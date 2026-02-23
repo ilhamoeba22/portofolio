@@ -16,21 +16,26 @@ export const viewport: Viewport = {
   themeColor: "#030014",
 };
 
+import { LanguageProvider } from "@/context/LanguageContext";
+
 export const metadata: Metadata = siteConfig;
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={cn(
           "bg-[#030014] overflow-y-scroll overflow-x-hidden",
           inter.className
         )}
       >
-        <StarsCanvas />
-        <Navbar />
-        {children}
-        <Footer />
+        <LanguageProvider>
+          <StarsCanvas />
+          <Navbar />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
