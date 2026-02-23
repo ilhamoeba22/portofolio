@@ -8,6 +8,8 @@ import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/lib/motion"
 
 import { useLanguage } from "@/context/LanguageContext";
 
+import { ASSET_PREFIX } from "@/constants/config";
+
 export const Encryption = () => {
   const { t } = useLanguage();
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -33,7 +35,7 @@ export const Encryption = () => {
         {/* Lock icon preserved from template */}
         <div className="flex flex-col items-center group cursor-pointer w-auto h-auto mb-6">
           <Image
-            src="/lock-top.png"
+            src={`${ASSET_PREFIX}/lock-top.png`}
             alt="Lock top"
             width={50}
             height={50}
@@ -41,7 +43,7 @@ export const Encryption = () => {
             style={{ height: "auto" }}
           />
           <Image
-            src="/lock-main.png"
+            src={`${ASSET_PREFIX}/lock-main.png`}
             alt="Lock main"
             width={70}
             height={70}

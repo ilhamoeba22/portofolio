@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
+import { ASSET_PREFIX } from "@/constants/config";
+
 type SkillDataProviderProps = {
   src: string;
   name: string;
@@ -39,7 +41,7 @@ export const SkillDataProvider = ({
       custom={index}
       transition={{ delay: index * animationDelay }}
     >
-      <Image src={`/skills/${src}`} width={width} height={height} alt={name} style={{ height: "auto" }} />
+      <Image src={`${ASSET_PREFIX}/skills/${src}`} width={width} height={height} alt={name} style={{ height: "auto" }} />
     </motion.div>
   );
 };

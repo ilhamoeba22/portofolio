@@ -13,6 +13,8 @@ import {
 
 import { useLanguage } from "@/context/LanguageContext";
 
+import { ASSET_PREFIX } from "@/constants/config";
+
 export const HeroContent = () => {
   const { t } = useLanguage();
 
@@ -91,12 +93,13 @@ export const HeroContent = () => {
               duration: 10,
               repeat: Infinity,
               ease: "easeInOut",
+              times: [0, 0.2, 0.4, 0.6, 0.8, 1],
             }}
           >
             {/* Photo with reduced blended edges */}
             <div className="profile-photo-mask">
               <Image
-                src="/foto-ilham.jpeg"
+                src={`${ASSET_PREFIX}/foto-ilham.jpeg`}
                 alt="Muhammad Ilham Pratama"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

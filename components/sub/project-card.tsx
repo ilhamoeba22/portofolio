@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { ASSET_PREFIX } from "@/constants/config";
+
 type ProjectCardProps = {
   src: string;
   title: string;
@@ -24,7 +26,7 @@ export const ProjectCard = ({
     >
       <div className="relative overflow-hidden">
         <Image
-          src={src}
+          src={`${ASSET_PREFIX}${src}`}
           alt={title}
           width={1000}
           height={1000}

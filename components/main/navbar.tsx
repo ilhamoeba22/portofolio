@@ -7,6 +7,8 @@ import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 import { LanguageSwitcher } from "@/components/sub/LanguageSwitcher";
 import { useLanguage } from "@/context/LanguageContext";
 
+import { ASSET_PREFIX } from "@/constants/config";
+
 export const Navbar = () => {
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,7 +23,7 @@ export const Navbar = () => {
           className="flex items-center"
         >
           <Image
-            src="/logo.png"
+            src={`${ASSET_PREFIX}/logo.png`}
             alt="Logo"
             width={70}
             height={70}
