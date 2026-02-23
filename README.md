@@ -61,6 +61,21 @@ space-portfolio/
     |-- index.ts
   |- constants/
     |-- index.ts
+    |-- translations.ts
+  |- context/
+    |-- LanguageContext.tsx
+  |- data-diri/
+    |-- sertifikat/
+    |-- Dokumentasi Pengembangan Aplikasi Pengadaan (Procurement).pdf
+    |-- Dokumentasi Pengembangan Aplikasi Website Riplay.pdf
+    |-- Dokumentasi Pengembangan Aplikasi Website Utama.pdf
+    |-- Dokumentasi Pengenbangan Aplikasi Front-Office (Antrian).pdf
+    |-- Dokumentasi Pengenbangan Aplikasi History (The Evidence).pdf
+    |-- foto-ilham.jpeg
+    |-- MSIB SEAL-FINAL PROJECT.txt
+    |-- OPA ECC - Project detail.txt
+    |-- Profile.pdf
+    |-- Resume-profile.txt
   |- lib/
     |-- motion.ts
     |-- utils.ts
