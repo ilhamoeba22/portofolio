@@ -46,22 +46,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ilhamoeba22/portofolio"
   },
-  "homepage": "",
+  "homepage": "https://ilhamoeba22.github.io/portofolio",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/ilhamoeba22/portofolio/issues"
   },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@react-three/drei": "^10.7.7",
