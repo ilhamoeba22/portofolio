@@ -18,7 +18,7 @@ export const SkillText = () => {
     <div className="w-full h-auto flex flex-col items-center justify-center">
       <motion.div
         variants={slideInFromTop(0)}
-        className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]]"
+        className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
       >
         <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
         <h1 className="Welcome-text text-[13px]">
@@ -26,12 +26,12 @@ export const SkillText = () => {
         </h1>
       </motion.div>
 
-      <motion.div
-        variants={slideInFromLeft(0.5)}
-        className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mt-[10px] text-center mb-[15px]"
+      <motion.h2
+        variants={slideInFromLeft(0.3)}
+        className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mt-6 text-center mb-10 relative z-[20]"
       >
         {t("skills_title")}
-      </motion.div>
+      </motion.h2>
 
       <motion.div
         variants={slideInFromRight(0.5)}

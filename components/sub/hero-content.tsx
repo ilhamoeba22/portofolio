@@ -24,7 +24,7 @@ export const HeroContent = () => {
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
-          variants={slideInFromTop}
+          variants={slideInFromTop(0.5)}
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]]"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
@@ -99,10 +99,12 @@ export const HeroContent = () => {
                 src="/foto-ilham.jpeg"
                 alt="Muhammad Ilham Pratama"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 draggable={false}
                 className="select-none object-cover"
                 style={{ objectPosition: "center top" }}
                 priority
+                loading="eager"
               />
               {/* Subtle Holographic Overlay */}
               <div className="profile-holo-overlay" />

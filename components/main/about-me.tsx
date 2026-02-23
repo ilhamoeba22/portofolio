@@ -124,7 +124,7 @@ export const AboutMe = () => {
         <section
             id="about-me"
             ref={ref}
-            className="relative flex flex-col items-center justify-center py-24 px-6 md:px-20"
+            className="relative flex flex-col items-center justify-center py-24"
         >
             {/* National Ambient Background Removed from here to sit between sections */}
 
@@ -134,21 +134,18 @@ export const AboutMe = () => {
             <motion.div
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
-                className="z-10 w-full max-w-[1200px]"
+                className="z-10 w-full max-w-[1200px] px-6 md:px-20"
             >
+                <motion.h2
+                    variants={slideInFromLeft(0.3)}
+                    className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20 text-center w-full"
+                >
+                    {t("about_title")}
+                </motion.h2>
+
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     {/* Left: Content */}
                     <div className="flex-1 space-y-8">
-                        <motion.div variants={slideInFromLeft(0.3)}>
-                            <div className="flex items-center gap-4 mb-2">
-                                <h2 className="text-4xl md:text-5xl font-bold text-white">
-                                    {t("about_title")}
-                                </h2>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <div className="h-1.5 w-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full shadow-[0_0_10px_#bc13fe]" />
-                            </div>
-                        </motion.div>
 
                         <motion.div
                             variants={slideInFromLeft(0.5)}

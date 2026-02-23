@@ -29,6 +29,7 @@ export const ProjectCard = ({
           width={1000}
           height={1000}
           className="w-full object-cover aspect-video group-hover:scale-105 transition-transform duration-500"
+          style={{ height: "auto" }}
         />
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span className="text-white font-medium px-4 py-2 border border-white/30 rounded-full bg-white/10 backdrop-blur-sm">

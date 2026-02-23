@@ -19,21 +19,23 @@ export const Projects = () => {
       id="projects"
       className="flex flex-col items-center justify-center py-20 relative z-[20]"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-        {t("projects_title")}
-      </h1>
-      <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
-        {PROJECTS.map((project) => (
-          <ProjectCard
-            key={project.title}
-            src={project.image}
-            title={project.title}
-            description={t(project.descriptionKey as TranslationKey)}
-            tech={project.tech}
-            onClick={() => setSelectedProject(project)}
-          />
-        ))}
-      </div>
+      <div className="w-full max-w-[1200px] px-6 md:px-20 flex flex-col items-center">
+        <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+          {t("projects_title")}
+        </h1>
+        <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {PROJECTS.map((project) => (
+            <ProjectCard
+              key={project.title}
+              src={project.image}
+              title={project.title}
+              description={t(project.descriptionKey as TranslationKey)}
+              tech={project.tech}
+              onClick={() => setSelectedProject(project)}
+            />
+          ))}
+        </div>
+      </div >
 
       <AnimatePresence>
         {selectedProject && (
@@ -129,6 +131,6 @@ export const Projects = () => {
           </div>
         )}
       </AnimatePresence>
-    </section>
+    </section >
   );
 };

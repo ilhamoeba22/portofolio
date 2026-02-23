@@ -17,11 +17,11 @@ export const Encryption = () => {
       <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="w-full flex flex-col items-center z-[5]"
+        className="w-full max-w-[1200px] px-6 md:px-20 flex flex-col items-center z-[5]"
       >
         {/* Title */}
         <motion.div
-          variants={slideInFromTop}
+          variants={slideInFromTop(0.5)}
           className="text-[40px] font-medium text-center text-gray-200 mb-6"
         >
           {t("domain_title").split(" ").slice(0, 2).join(" ")}{" "}
@@ -38,6 +38,7 @@ export const Encryption = () => {
             width={50}
             height={50}
             className="translate-y-5 transition-all duration-200 group-hover:translate-y-11"
+            style={{ height: "auto" }}
           />
           <Image
             src="/lock-main.png"
@@ -45,6 +46,7 @@ export const Encryption = () => {
             width={70}
             height={70}
             className="z-10"
+            style={{ height: "auto" }}
           />
         </div>
 
@@ -53,7 +55,7 @@ export const Encryption = () => {
         </div>
 
         {/* Domain cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1000px] px-6 z-[20]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full z-[20]">
           <motion.div
             variants={slideInFromLeft(0.5)}
             className="p-6 rounded-lg border border-[#7042f88b] bg-[#0300148a] backdrop-blur-sm"
@@ -65,7 +67,7 @@ export const Encryption = () => {
           </motion.div>
 
           <motion.div
-            variants={slideInFromTop}
+            variants={slideInFromTop(0.5)}
             className="p-6 rounded-lg border border-[#7042f88b] bg-[#0300148a] backdrop-blur-sm"
           >
             <h3 className="text-lg font-bold text-white mb-3">{t("domain_digital_title")}</h3>
@@ -86,7 +88,7 @@ export const Encryption = () => {
         </div>
 
         {/* Row 2: Design Thinking & Design Sprint */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[700px] px-6 z-[20] mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[800px] z-[20] mt-6">
           <motion.div
             variants={slideInFromLeft(0.7)}
             className="p-6 rounded-lg border border-[#7042f88b] bg-[#0300148a] backdrop-blur-sm"

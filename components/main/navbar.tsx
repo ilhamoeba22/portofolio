@@ -27,6 +27,8 @@ export const Navbar = () => {
             height={70}
             draggable={false}
             className="cursor-pointer"
+            priority
+            loading="eager"
           />
         </Link>
 

@@ -14,12 +14,12 @@ export const Contact = () => {
         <section
             id="contact"
             ref={ref}
-            className="flex flex-col items-center justify-center py-20 px-6 md:px-20"
+            className="flex flex-col items-center justify-center py-20"
         >
             <motion.div
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
-                className="w-full max-w-[900px]"
+                className="w-full max-w-[1200px] px-6 md:px-20"
             >
                 <motion.h2
                     variants={slideInFromLeft(0.3)}
@@ -103,6 +103,7 @@ export const Contact = () => {
                     >
                         <div>
                             <input
+                                suppressHydrationWarning
                                 type="text"
                                 placeholder="Your Name"
                                 className="w-full p-3 rounded-lg border border-[#7042f88b] bg-[#0300145e] text-white placeholder-gray-500 focus:border-[#7042f8] focus:outline-none transition-all"
@@ -110,6 +111,7 @@ export const Contact = () => {
                         </div>
                         <div>
                             <input
+                                suppressHydrationWarning
                                 type="email"
                                 placeholder="Your Email"
                                 className="w-full p-3 rounded-lg border border-[#7042f88b] bg-[#0300145e] text-white placeholder-gray-500 focus:border-[#7042f8] focus:outline-none transition-all"
@@ -117,6 +119,7 @@ export const Contact = () => {
                         </div>
                         <div>
                             <input
+                                suppressHydrationWarning
                                 type="text"
                                 placeholder="Subject"
                                 className="w-full p-3 rounded-lg border border-[#7042f88b] bg-[#0300145e] text-white placeholder-gray-500 focus:border-[#7042f8] focus:outline-none transition-all"
@@ -124,12 +127,14 @@ export const Contact = () => {
                         </div>
                         <div>
                             <textarea
+                                suppressHydrationWarning
                                 rows={5}
                                 placeholder="Your Message"
                                 className="w-full p-3 rounded-lg border border-[#7042f88b] bg-[#0300145e] text-white placeholder-gray-500 focus:border-[#7042f8] focus:outline-none transition-all resize-none"
                             />
                         </div>
                         <button
+                            suppressHydrationWarning
                             type="submit"
                             className="w-full py-3 button-primary text-white font-semibold rounded-lg cursor-pointer hover:opacity-90 transition-all"
                         >

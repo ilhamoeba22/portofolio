@@ -17,12 +17,12 @@ export const Experience = () => {
         <section
             id="experience"
             ref={ref}
-            className="flex flex-col items-center justify-center py-20 px-6 md:px-20"
+            className="flex flex-col items-center justify-center py-20"
         >
             <motion.div
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
-                className="w-full max-w-[900px]"
+                className="w-full max-w-[1200px] px-6 md:px-20"
             >
                 <motion.h2
                     variants={slideInFromLeft(0.3)}
