@@ -49,9 +49,10 @@ jobs:
             exit 1
           fi
       - name: Setup Node
+        # IDE warnings below are likely false positives; these versions are valid standard actions.
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
