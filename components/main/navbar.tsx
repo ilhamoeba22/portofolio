@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 import { LanguageSwitcher } from "@/components/sub/LanguageSwitcher";
 import { useLanguage } from "@/context/LanguageContext";
+import { TranslationKey } from "@/constants/translations";
 
 import { ASSET_PREFIX } from "@/constants/config";
 
@@ -104,7 +105,7 @@ export const Navbar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="text-xl font-medium text-gray-200 hover:text-purple-400 transition-colors py-2 border-b border-white/5 w-full text-center"
                   >
-                    {t(`nav_${nav.title.toLowerCase()}`)}
+                    {t(`nav_${nav.title.toLowerCase()}` as TranslationKey)}
                   </Link>
                 ))}
               </div>
