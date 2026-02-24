@@ -25,7 +25,7 @@ export const Education = () => {
             >
                 <motion.h2
                     variants={slideInFromLeft(0.3)}
-                    className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10 text-center"
+                    className="text-3xl sm:text-4xl md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10 text-center"
                 >
                     {t("education_title")}
                 </motion.h2>

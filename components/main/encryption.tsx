@@ -24,7 +24,7 @@ export const Encryption = () => {
         {/* Title */}
         <motion.div
           variants={slideInFromTop(0.5)}
-          className="text-[40px] font-medium text-center text-gray-200 mb-6"
+          className="text-2xl sm:text-3xl md:text-[40px] font-medium text-center text-gray-200 mb-6"
         >
           {t("domain_title").split(" ").slice(0, 2).join(" ")}{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">

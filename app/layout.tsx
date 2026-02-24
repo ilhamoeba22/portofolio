@@ -14,6 +14,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const viewport: Viewport = {
   themeColor: "#030014",
+  width: "device-width",
+  initialScale: 1,
 };
 
 import { LanguageProvider } from "@/context/LanguageContext";

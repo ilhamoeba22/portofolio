@@ -22,12 +22,12 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col md:flex-row items-center justify-center px-6 md:px-20 mt-40 w-full z-[20]"
+      className="flex flex-col md:flex-row items-center justify-center px-6 md:px-20 mt-28 md:mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-center md:text-start">
         <motion.div
           variants={slideInFromTop(0.5)}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]]"
+          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] self-center md:self-start"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
@@ -37,7 +37,7 @@ export const HeroContent = () => {
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-4xl md:text-6xl text-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-6 mt-6 text-3xl sm:text-4xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
             Muhammad{" "}
@@ -50,24 +50,24 @@ export const HeroContent = () => {
 
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          className="text-base md:text-lg text-gray-400 my-5 max-w-[600px]"
         >
           {t("hero_p")}
         </motion.p>
 
         <motion.div
           variants={slideInFromLeft(1)}
-          className="flex flex-row gap-4"
+          className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
         >
           <Link
             href="#projects"
-            className="py-2 px-6 button-primary text-center text-white cursor-pointer rounded-lg"
+            className="py-2 px-6 button-primary text-center text-white cursor-pointer rounded-lg whitespace-nowrap"
           >
             {t("hero_btn_explore")}
           </Link>
           <Link
             href="#contact"
-            className="py-2 px-6 border border-[#7042f88b] text-center text-white cursor-pointer rounded-lg hover:bg-[#7042f815] transition-all"
+            className="py-2 px-6 border border-[#7042f88b] text-center text-white cursor-pointer rounded-lg hover:bg-[#7042f815] transition-all whitespace-nowrap"
           >
             {t("hero_btn_contact")}
           </Link>

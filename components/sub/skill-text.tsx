@@ -28,14 +28,14 @@ export const SkillText = () => {
 
       <motion.h2
         variants={slideInFromLeft(0.3)}
-        className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mt-6 text-center mb-10 relative z-[20]"
+        className="text-3xl sm:text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mt-6 text-center mb-10 relative z-[20]"
       >
         {t("skills_title")}
       </motion.h2>
 
       <motion.div
         variants={slideInFromRight(0.5)}
-        className="cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center"
+        className="cursive text-[16px] md:text-[20px] text-gray-200 mb-10 mt-[10px] text-center"
       >
         {t("skills_cursive")}
       </motion.div>

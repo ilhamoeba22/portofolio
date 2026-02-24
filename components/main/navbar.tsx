@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 import { LanguageSwitcher } from "@/components/sub/LanguageSwitcher";
@@ -76,33 +77,56 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="absolute top-[65px] left-0 w-full bg-[#030014] p-5 flex flex-col items-center text-gray-300 md:hidden border-b border-[#2A0E61]">
-          {/* Links */}
-          <div className="flex flex-col items-center gap-4">
-            <Link href="#about-me" className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center" onClick={() => setIsMobileMenuOpen(false)}>{t("nav_about")}</Link>
-            <Link href="#skills" className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center" onClick={() => setIsMobileMenuOpen(false)}>{t("nav_skills")}</Link>
-            <Link href="#experience" className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center" onClick={() => setIsMobileMenuOpen(false)}>{t("nav_experience")}</Link>
-            <Link href="#projects" className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center" onClick={() => setIsMobileMenuOpen(false)}>{t("nav_projects")}</Link>
-            <Link href="#contact" className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center" onClick={() => setIsMobileMenuOpen(false)}>{t("nav_contact")}</Link>
-          </div>
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[-1] md:hidden"
+            />
+            <motion.div
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="absolute top-[65px] right-0 w-[280px] h-[calc(100vh-65px)] bg-[#030014]/95 backdrop-blur-xl p-8 flex flex-col items-center shadow-2xl md:hidden border-l border-white/10"
+            >
+              {/* Links */}
+              <div className="flex flex-col items-center gap-6 w-full">
+                {NAV_LINKS.map((nav) => (
+                  <Link
+                    key={nav.title}
+                    href={nav.link}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-xl font-medium text-gray-200 hover:text-purple-400 transition-colors py-2 border-b border-white/5 w-full text-center"
+                  >
+                    {t(`nav_${nav.title.toLowerCase()}`)}
+                  </Link>
+                ))}
+              </div>
 
-          {/* Social Icons */}
-          <div className="flex justify-center gap-6 mt-6">
-            {SOCIALS.map(({ link, name, icon: Icon }) => (
-              <Link
-                href={link}
-                target="_blank"
-                rel="noreferrer noopener"
-                key={name}
-              >
-                <Icon className="h-8 w-8 text-white" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+              {/* Social Icons */}
+              <div className="mt-auto flex justify-center gap-6 pb-10">
+                {SOCIALS.map(({ link, name, icon: Icon }) => (
+                  <Link
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    key={name}
+                    className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all"
+                  >
+                    <Icon className="h-6 w-6 text-white" />
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
