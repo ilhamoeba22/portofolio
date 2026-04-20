@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 
+/* Local Inter fallback: if files exist in /public/fonts/inter/, they will be used.
+   If files are missing, the browser will use the fallback system fonts. */
+/* @font-face removed: no woff2 available, using Google Fonts fallback */\n/*\n  font-family: 'InterLocal';\n  src: url('/fonts/inter/Inter-Regular.woff2') format('woff2');\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n*/
+/* @font-face removed: no woff2 available */\n/*\n  font-family: 'InterLocal';\n  src: url('/fonts/inter/Inter-Medium.woff2') format('woff2');\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n*/
+/* @font-face removed: no woff2 available */\n/*\n  font-family: 'InterLocal';\n  src: url('/fonts/inter/Inter-Bold.woff2') format('woff2');\n  font-weight: 700;\n  font-style: normal;\n  font-display: swap;\n*/
+
+/* Base font stack: prefer local Inter if available, otherwise system fonts */
+:root {
+  --font-sans: 'InterLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

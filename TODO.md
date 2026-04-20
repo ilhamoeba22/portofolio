@@ -1,0 +1,1 @@
+# TODO: Fix Next.js Build Error (Completed ✅)\n\n1. [x] Edit tsconfig.json - Remove invalid 'ignoreDeprecations' flag\n2. [x] Test with `npm run build`\n3. [x] Mark complete\n\nNext.js build now succeeds: TypeScript type checking passes (Finished in 5.5s), static pages generated successfully.

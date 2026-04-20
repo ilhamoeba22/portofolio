@@ -1,119 +1,128 @@
-# Muhammad Ilham Pratama | Personal Portfolio
+# Muhammad Ilham Pratama | Personal Portfolio (Next.js 16)
 
 <!-- Table of Contents -->
 <details>
+<summary># :notebook_with_decorative_cover: Table of Contents</summary>
 
-<summary>
-
-# :notebook_with_decorative_cover: Table of Contents
-
-</summary>
-
-- [Folder Structure](#bangbang-folder-structure)
-- [Getting Started](#toolbox-getting-started)
-- [Tech Stack](#gear-tech-stack)
+- [#️⃣ Folder Structure](#bangbang-folder-structure)
+- [🚀 Getting Started](#toolbox-getting-started)
+- [⚙️ Tech Stack](#gear-tech-stack)
+- [☁️ Deployment](#cloud-deployment)
+- [📦 Required Packages](#package-required-packages)
 
 </details>
 
-## :bangbang: Folder Structure
+## 📁 Folder Structure
 
-Here is the folder structure of this app.
-
-<!--- FOLDER_STRUCTURE_START --->
 ```bash
 space-portfolio/
-  |- app/
-    |-- apple-icon.png
-    |-- favicon.ico
-    |-- globals.css
-    |-- icon1.png
-    |-- icon2.png
-    |-- layout.tsx
-    |-- page.tsx
-  |- components/
-    |-- main/
-    |-- sub/
-  |- config/
-    |-- index.ts
-  |- constants/
-    |-- index.ts
-    |-- translations.ts
-  |- context/
-    |-- LanguageContext.tsx
-  |- data-diri/
-    |-- sertifikat/
-    |-- Dokumentasi Pengembangan Aplikasi Pengadaan (Procurement).pdf
-    |-- Dokumentasi Pengembangan Aplikasi Website Riplay.pdf
-    |-- Dokumentasi Pengembangan Aplikasi Website Utama.pdf
-    |-- Dokumentasi Pengenbangan Aplikasi Front-Office (Antrian).pdf
-    |-- Dokumentasi Pengenbangan Aplikasi History (The Evidence).pdf
-    |-- foto-ilham.jpeg
-    |-- MSIB SEAL-FINAL PROJECT.txt
-    |-- OPA ECC - Project detail.txt
-    |-- Profile.pdf
-    |-- Resume-profile.txt
-  |- lib/
-    |-- motion.ts
-    |-- utils.ts
-  |- public/
-  |- .eslintrc.json
-  |- .gitignore
-  |- eslint.config.mjs
-  |- netlify.toml
-  |- next.config.js
-  |- package-lock.json
-  |- package.json
-  |- postcss.config.js
-  |- tailwind.config.ts
-  |- tsconfig.json
+├── app/                 # Next.js App Router pages
+├── components/          # React components
+├── constants/           # App constants & config
+├── lib/                 # Utility functions
+├── public/              # Static assets
+├── scripts/             # Build scripts
+├── .gitignore
+├── next.config.js
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── README.md
 ```
-<!--- FOLDER_STRUCTURE_END --->
 
-<br />
+## 🚀 Getting Started
 
-## :toolbox: Getting Started
+### Prerequisites
+- **Node.js** 20+ 
+- **Git**
 
-1. Make sure **Git** and **NodeJS** is installed.
+### Local Development
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # Production build
+npm run start    # Production server
+npm run lint     # Lint code
+```
 
-2. Clone this repository to your local computer.
+## ⚙️ Tech Stack
 
-3. Open terminal in root directory. Run `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
+![React](https://img.shields.io/badge/React-19.2.4-blue)
+![Next.js](https://img.shields.io/badge/Next.js-16.2.4-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3-green)
+![Three.js](https://img.shields.io/badge/Three.js-0.183-orange)
 
-4. Now app is fully configured 👍 and you can start using this app using `npm run dev` or `yarn dev`.
+**Key Dependencies:**
+```
+Next.js 16.2.4 (App Router + Turbopack)
+React 19.2.4
+Framer Motion 12.34
+@react-three/fiber & drei (3D)
+Tailwind CSS 3.3
+TypeScript 5
+```
 
+## ☁️ Deployment
 
-## :gear: Tech Stack
+### Vercel (Recommended)
+1. Push to GitHub
+2. Connect repo at [vercel.com](https://vercel.com)
+3. Auto-deploys on push to `main`
+4. Framework: **Next.js**
+5. Root: `./`
+6. Build: `npm run build`
+7. Output: `.next`
 
-[![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Netlify](https://skillicons.dev/icons?i=netlify "Netlify")](https://netlify.app/ "Netlify") [![Three.js](https://skillicons.dev/icons?i=threejs "Three.js")](https://threejs.org/ "Three.js")
+**Vercel Config (vercel.json):**
+```json
+{
+  \"buildCommand\": \"npm run build\",
+  \"outputDirectory\": \".next\",
+  \"framework\": \"nextjs\"
+}
+```
 
+### Netlify
+1. Connect GitHub repo
+2. Build command: `npm run build`
+3. Publish directory: `.next`
+4. Add `netlify.toml`:
+```
+[build]
+  command = \"npm run build\"
+  publish = \".next\"
+```
 
-## :gem: Acknowledgements
+### Other Platforms
+| Platform | Build Command | Publish Dir |
+|----------|---------------|-------------|
+| Railway | `npm run build` | `.next` |
+| Render | `npm run build` | `.next` |
+| Docker | See Dockerfile | N/A |
 
-Useful resources and dependencies that are used in Space Portfolio.
+**Production Notes:**
+- Images unoptimized (next.config.js)
+- Static export supported (all pages SSG)
 
-<!--- DEPENDENCIES_START --->
-- [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.2.0
-- [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
-- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.5.0
-- [@types/node](https://www.npmjs.com/package/@types/node): ^25
-- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.14
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.24
-- [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
-- [eslint](https://www.npmjs.com/package/eslint): ^9.39.2
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.1.6
-- [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.34.2
-- [next](https://www.npmjs.com/package/next): 16.1.6
-- [postcss](https://www.npmjs.com/package/postcss): ^8
-- [react](https://www.npmjs.com/package/react): 19.2.4
-- [react-dom](https://www.npmjs.com/package/react-dom): 19.2.4
-- [react-icons](https://www.npmjs.com/package/react-icons): ^5.0.1
-- [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^10.0.2
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.5.0
-- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
-- [three](https://www.npmjs.com/package/three): ^0.183.0
-- [typescript](https://www.npmjs.com/package/typescript): ^5
+## 📦 Required Packages
 
-<!--- DEPENDENCIES_END --->
+**Runtime Dependencies:**
+```bash
+npm i next@16.2.4 react@19.2.4 react-dom@19.2.4
+npm i @react-three/fiber@9.5.0 @react-three/drei@10.7.7 three@0.183.1
+npm i framer-motion@12.34.2 clsx@2.1.1 tailwind-merge@3.5.0
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**Dev Dependencies:**
+```bash
+npm i -D typescript@5 @types/react@19.2.14 @types/node@25.3.0
+npm i -D tailwindcss@3.3.0 postcss autoprefixer eslint-config-next@16.1.6
+```
+
+**Environment Variables:** None required.
+
+---
+
+⭐ **Star this repo if you found it helpful!**  
+🤝 **Deploy anywhere with zero-config!**

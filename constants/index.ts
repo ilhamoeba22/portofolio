@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaUser, FaFolder, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
 import {
   RxGithubLogo,
   RxLinkedinLogo,
@@ -400,12 +400,12 @@ export const FOOTER_DATA = [
       },
       {
         name: "About Me",
-        icon: null,
+        icon: FaUser,
         link: "#about-me",
       },
       {
         name: "My Projects",
-        icon: null,
+        icon: FaFolder,
         link: "#projects",
       },
     ],
@@ -415,12 +415,12 @@ export const FOOTER_DATA = [
     data: [
       {
         name: "Sleman, Yogyakarta",
-        icon: null,
+        icon: FaMapMarkerAlt,
         link: "#contact",
       },
       {
         name: "Indonesia",
-        icon: null,
+        icon: FaGlobe,
         link: "#contact",
       },
     ],

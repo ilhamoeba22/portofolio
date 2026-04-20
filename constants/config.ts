@@ -1,1 +1,1 @@
-export const ASSET_PREFIX = "/portofolio";
+export const ASSET_PREFIX = "";
