@@ -31,6 +31,7 @@ export const Projects = () => {
               title={project.title}
               description={t(project.descriptionKey as TranslationKey)}
               tech={project.tech}
+              status={"status" in project ? project.status : undefined}
               onClick={() => setSelectedProject(project)}
             />
           ))}
@@ -71,6 +72,11 @@ export const Projects = () => {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-top hover:scale-105 transition-transform duration-700"
                 />
+                {"status" in selectedProject && selectedProject.status && (
+                  <span className="absolute left-5 top-5 rounded-full border border-cyan-400/40 bg-cyan-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200 backdrop-blur-md">
+                    {selectedProject.status}
+                  </span>
+                )}
                 {/* Subtle Gradient Overlay for depth */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-40 md:opacity-20" />
               </div>
@@ -119,6 +125,10 @@ export const Projects = () => {
                       >
                         🌐 {language === "en" ? "Live Project" : "Lihat Proyek"}
                       </a>
+                    ) : "status" in selectedProject && selectedProject.status ? (
+                      <span className="flex-1 py-3 px-6 rounded-xl border border-cyan-400/30 bg-cyan-500/10 text-cyan-200 font-semibold text-center cursor-not-allowed text-xs md:text-sm">
+                        🚧 {language === "en" ? "Currently In Development" : "Sedang Dalam Pengembangan"}
+                      </span>
                     ) : (
                       <span className="flex-1 py-3 px-6 rounded-xl border border-white/10 text-gray-500 font-semibold text-center cursor-not-allowed text-xs md:text-sm">
                         🔒 {language === "en" ? "Private / Internal System" : "Sistem Internal / Privat"}
