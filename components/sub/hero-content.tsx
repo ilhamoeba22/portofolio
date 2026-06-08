@@ -1,7 +1,7 @@
 "use client";
 
 import { SparklesIcon } from "@heroicons/react/24/solid";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,31 +17,32 @@ import { ASSET_PREFIX } from "@/constants/config";
 
 export const HeroContent = () => {
   const { t } = useLanguage();
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col md:flex-row items-center justify-center px-6 md:px-20 mt-28 md:mt-40 w-full z-[20]"
+      className="z-[20] mt-24 flex w-full flex-col items-center justify-center px-5 sm:px-8 md:mt-40 md:flex-row md:px-20"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-center md:text-start">
+      <div className="m-auto flex h-full w-full flex-col justify-center gap-5 text-center md:text-start">
         <motion.div
-          variants={slideInFromTop(0.5)}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] self-center md:self-start"
+          variants={slideInFromTop(0.3)}
+          className="Welcome-box self-center border border-[#7042f88b] px-[7px] py-[8px] opacity-[0.9] md:self-start"
         >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
+          <SparklesIcon className="mr-[10px] h-5 w-5 text-[#b49bff]" />
           <h1 className="Welcome-text text-[13px]">
             {t("hero_badge")}
           </h1>
         </motion.div>
 
         <motion.div
-          variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-3xl sm:text-4xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          variants={slideInFromLeft(0.4)}
+          className="mt-5 flex h-auto w-auto max-w-[680px] flex-col gap-5 text-3xl font-bold text-white sm:text-4xl md:text-6xl"
         >
           <span>
             Muhammad{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            <span className="bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent">
               Ilham
             </span>{" "}
             Pratama
@@ -49,71 +50,72 @@ export const HeroContent = () => {
         </motion.div>
 
         <motion.p
-          variants={slideInFromLeft(0.8)}
-          className="text-base md:text-lg text-gray-400 my-5 max-w-[600px]"
+          variants={slideInFromLeft(0.55)}
+          className="mx-auto my-4 max-w-[650px] text-base leading-relaxed text-gray-300 md:mx-0 md:text-lg"
         >
           {t("hero_p")}
         </motion.p>
 
         <motion.div
-          variants={slideInFromLeft(1)}
-          className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          variants={slideInFromLeft(0.7)}
+          className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start"
         >
           <Link
             href="#projects"
-            className="py-2 px-6 button-primary text-center text-white cursor-pointer rounded-lg whitespace-nowrap"
+            className="button-primary cursor-pointer whitespace-nowrap rounded-lg px-6 py-3 text-center text-white"
           >
             {t("hero_btn_explore")}
           </Link>
           <Link
             href="#contact"
-            className="py-2 px-6 border border-[#7042f88b] text-center text-white cursor-pointer rounded-lg hover:bg-[#7042f815] transition-all whitespace-nowrap"
+            className="cursor-pointer whitespace-nowrap rounded-lg border border-[#7042f88b] px-6 py-3 text-center text-white transition-all hover:bg-[#7042f815]"
           >
             {t("hero_btn_contact")}
           </Link>
         </motion.div>
       </div>
 
-      {/* ── Profile Photo — Emerging from Black Hole Vortex ── */}
       <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center mt-10 md:mt-0"
+        variants={slideInFromRight(0.55)}
+        className="mt-10 flex h-full w-full items-center justify-center md:mt-0"
       >
         <div className="profile-container">
-          {/* 3D Animated Photo Wrapper */}
           <motion.div
             className="profile-3d-wrapper"
-            animate={{
-              rotateY: [0, 8, -8, 4, -4, 0],
-              rotateX: [0, -5, 3, -3, 5, 0],
-              y: [0, -10, 0, 10, 0],
-              scale: [1, 1.02, 0.99, 1.01, 1],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-              times: [0, 0.2, 0.4, 0.6, 0.8, 1],
-            }}
+            animate={
+              shouldReduceMotion
+                ? undefined
+                : {
+                    rotateY: [0, 5, -5, 2, -2, 0],
+                    rotateX: [0, -3, 2, -2, 3, 0],
+                    y: [0, -6, 0, 6, 0],
+                  }
+            }
+            transition={
+              shouldReduceMotion
+                ? undefined
+                : {
+                    duration: 14,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.4, 0.6, 0.8, 1],
+                  }
+            }
           >
-            {/* Photo with reduced blended edges */}
             <div className="profile-photo-mask">
               <Image
                 src={`${ASSET_PREFIX}/foto-ilham.jpeg`}
                 alt="Muhammad Ilham Pratama"
                 fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, (max-width: 1200px) 360px, 360px"
                 draggable={false}
                 className="select-none object-cover"
                 style={{ objectPosition: "center top" }}
                 priority
-                loading="eager"
               />
-              {/* Subtle Holographic Overlay */}
               <div className="profile-holo-overlay" />
             </div>
 
-            {/* Subtle shadow beneath */}
             <div className="profile-3d-shadow" />
           </motion.div>
         </div>
