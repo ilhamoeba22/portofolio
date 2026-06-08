@@ -15,32 +15,35 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { AsciiIndonesia } from "@/components/sub/ascii_indonesia";
 
+const badgeClass = "px-4 py-2 text-sm rounded-full transition-all";
+
 export const Skills = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
+    rootMargin: "200px 0px",
   });
 
   return (
     <section
       id="skills"
       ref={ref}
-      className="flex flex-col items-center justify-center gap-3 h-full relative py-20"
+      className="relative flex h-full flex-col items-center justify-center gap-3 overflow-hidden py-20"
     >
-      <AsciiIndonesia opacity={0.25} isTop={true} />
+      <AsciiIndonesia opacity={0.18} isTop={true} />
 
-      <div className="z-[10] w-full max-w-[1200px] px-6 md:px-20 flex flex-col items-center">
+      <div className="z-[10] flex w-full max-w-[1200px] flex-col items-center px-5 sm:px-6 md:px-20">
         <motion.div
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="w-full flex flex-col items-center justify-center"
+          className="flex w-full flex-col items-center justify-center"
         >
           <SkillText />
         </motion.div>
 
-        <h3 className="text-lg font-semibold text-purple-400 mt-6 mb-2 tracking-wide">
+        <h3 className="mt-6 mb-2 text-center text-lg font-semibold tracking-wide text-purple-400">
           Backend Development & Frameworks
         </h3>
-        <div className="flex flex-row justify-around flex-wrap mt-2 gap-5 items-center">
+        <div className="mt-2 flex flex-row flex-wrap items-center justify-around gap-5">
           {SKILL_DATA.map((skill, i) => (
             <SkillDataProvider
               key={skill.skill_name}
@@ -52,7 +55,7 @@ export const Skills = () => {
             />
           ))}
         </div>
-        <div className="flex flex-row justify-center flex-wrap mt-2 gap-3 items-center w-full max-w-[900px]">
+        <div className="mt-2 flex w-full max-w-[900px] flex-row flex-wrap items-center justify-center gap-3">
           {[
             "Laravel 11",
             "CodeIgniter",
@@ -66,17 +69,17 @@ export const Skills = () => {
           ].map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 text-sm rounded-full bg-[#7042f815] border border-[#7042f88b] text-purple-300 hover:bg-[#7042f830] transition-all"
+              className={`${badgeClass} border border-[#7042f88b] bg-[#7042f815] text-purple-300 hover:bg-[#7042f830]`}
             >
               {skill}
             </span>
           ))}
         </div>
 
-        <h3 className="text-lg font-semibold text-purple-400 mt-8 mb-2 tracking-wide">
+        <h3 className="mt-8 mb-2 text-center text-lg font-semibold tracking-wide text-purple-400">
           Frontend Development & UI/UX
         </h3>
-        <div className="flex flex-row justify-around flex-wrap mt-2 gap-5 items-center">
+        <div className="mt-2 flex flex-row flex-wrap items-center justify-around gap-5">
           {FRONTEND_SKILL.map((skill, i) => (
             <SkillDataProvider
               key={skill.skill_name}
@@ -88,7 +91,7 @@ export const Skills = () => {
             />
           ))}
         </div>
-        <div className="flex flex-row justify-center flex-wrap mt-2 gap-3 items-center w-full max-w-[900px]">
+        <div className="mt-2 flex w-full max-w-[900px] flex-row flex-wrap items-center justify-center gap-3">
           {[
             "React",
             "Next.js",
@@ -102,17 +105,17 @@ export const Skills = () => {
           ].map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 text-sm rounded-full bg-[#7042f815] border border-[#7042f88b] text-purple-300 hover:bg-[#7042f830] transition-all"
+              className={`${badgeClass} border border-[#7042f88b] bg-[#7042f815] text-purple-300 hover:bg-[#7042f830]`}
             >
               {skill}
             </span>
           ))}
         </div>
 
-        <h3 className="text-lg font-semibold text-purple-400 mt-8 mb-2 tracking-wide">
+        <h3 className="mt-8 mb-2 text-center text-lg font-semibold tracking-wide text-purple-400">
           Database Management
         </h3>
-        <div className="flex flex-row justify-around flex-wrap mt-2 gap-5 items-center">
+        <div className="mt-2 flex flex-row flex-wrap items-center justify-around gap-5">
           {BACKEND_SKILL.map((skill, i) => (
             <SkillDataProvider
               key={skill.skill_name}
@@ -124,7 +127,7 @@ export const Skills = () => {
             />
           ))}
         </div>
-        <div className="flex flex-row justify-center flex-wrap mt-2 gap-3 items-center w-full max-w-[900px]">
+        <div className="mt-2 flex w-full max-w-[900px] flex-row flex-wrap items-center justify-center gap-3">
           {[
             "MySQL",
             "PostgreSQL",
@@ -135,17 +138,17 @@ export const Skills = () => {
           ].map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 text-sm rounded-full bg-[#0d948815] border border-[#0d94888b] text-cyan-300 hover:bg-[#0d948830] transition-all"
+              className={`${badgeClass} border border-[#0d94888b] bg-[#0d948815] text-cyan-300 hover:bg-[#0d948830]`}
             >
               {skill}
             </span>
           ))}
         </div>
 
-        <h3 className="text-lg font-semibold text-purple-400 mt-8 mb-2 tracking-wide">
+        <h3 className="mt-8 mb-2 text-center text-lg font-semibold tracking-wide text-purple-400">
           Tools, DevOps & Productivity
         </h3>
-        <div className="flex flex-row justify-around flex-wrap mt-2 gap-5 items-center">
+        <div className="mt-2 flex flex-row flex-wrap items-center justify-around gap-5">
           {FULLSTACK_SKILL.map((skill, i) => (
             <SkillDataProvider
               key={skill.skill_name}
@@ -157,7 +160,7 @@ export const Skills = () => {
             />
           ))}
         </div>
-        <div className="flex flex-row justify-center flex-wrap mt-2 gap-3 items-center w-full max-w-[900px]">
+        <div className="mt-2 flex w-full max-w-[900px] flex-row flex-wrap items-center justify-center gap-3">
           {[
             "Git",
             "GitHub",
@@ -174,17 +177,17 @@ export const Skills = () => {
           ].map((tool) => (
             <span
               key={tool}
-              className="px-4 py-2 text-sm rounded-full bg-[#7042f815] border border-[#7042f88b] text-purple-300 hover:bg-[#7042f830] transition-all"
+              className={`${badgeClass} border border-[#7042f88b] bg-[#7042f815] text-purple-300 hover:bg-[#7042f830]`}
             >
               {tool}
             </span>
           ))}
         </div>
 
-        <h3 className="text-lg font-semibold text-purple-400 mt-8 mb-2 tracking-wide">
+        <h3 className="mt-8 mb-2 text-center text-lg font-semibold tracking-wide text-purple-400">
           Specialized Libraries & Packages
         </h3>
-        <div className="flex flex-row justify-center flex-wrap mt-2 gap-3 items-center w-full max-w-[900px]">
+        <div className="mt-2 flex w-full max-w-[900px] flex-row flex-wrap items-center justify-center gap-3">
           {[
             "FilamentPHP v3",
             "Livewire",
@@ -202,17 +205,17 @@ export const Skills = () => {
           ].map((lib) => (
             <span
               key={lib}
-              className="px-4 py-2 text-sm rounded-full bg-[#7042f815] border border-[#7042f88b] text-purple-300 hover:bg-[#7042f830] transition-all"
+              className={`${badgeClass} border border-[#7042f88b] bg-[#7042f815] text-purple-300 hover:bg-[#7042f830]`}
             >
               {lib}
             </span>
           ))}
         </div>
 
-        <h3 className="text-lg font-semibold text-purple-400 mt-8 mb-2 tracking-wide">
+        <h3 className="mt-8 mb-2 text-center text-lg font-semibold tracking-wide text-purple-400">
           IT Support & Infrastructure
         </h3>
-        <div className="flex flex-row justify-around flex-wrap mt-2 gap-5 items-center">
+        <div className="mt-2 flex flex-row flex-wrap items-center justify-around gap-5">
           {IT_SUPPORT_SKILL.map((skill, i) => (
             <SkillDataProvider
               key={skill.skill_name}
@@ -224,7 +227,7 @@ export const Skills = () => {
             />
           ))}
         </div>
-        <div className="flex flex-row justify-center flex-wrap mt-2 gap-3 items-center w-full max-w-[900px]">
+        <div className="mt-2 flex w-full max-w-[900px] flex-row flex-wrap items-center justify-center gap-3">
           {[
             "Network Troubleshooting (LAN/WAN)",
             "Hardware Maintenance",
@@ -238,17 +241,17 @@ export const Skills = () => {
           ].map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 text-sm rounded-full bg-[#f5a62315] border border-[#f5a6238b] text-amber-300 hover:bg-[#f5a62330] transition-all"
+              className={`${badgeClass} border border-[#f5a6238b] bg-[#f5a62315] text-amber-300 hover:bg-[#f5a62330]`}
             >
               {skill}
             </span>
           ))}
         </div>
 
-        <h3 className="text-lg font-semibold text-purple-400 mt-8 mb-2 tracking-wide">
+        <h3 className="mt-8 mb-2 text-center text-lg font-semibold tracking-wide text-purple-400">
           Office Productivity & Business Tools
         </h3>
-        <div className="flex flex-row justify-around flex-wrap mt-2 gap-5 items-center">
+        <div className="mt-2 flex flex-row flex-wrap items-center justify-around gap-5">
           {OFFICE_SKILL.map((skill, i) => (
             <SkillDataProvider
               key={skill.skill_name}
@@ -261,10 +264,10 @@ export const Skills = () => {
           ))}
         </div>
 
-        <h3 className="text-lg font-semibold text-purple-400 mt-8 mb-2 tracking-wide">
+        <h3 className="mt-8 mb-2 text-center text-lg font-semibold tracking-wide text-purple-400">
           Domain Expertise, Certifications & Professional Skills
         </h3>
-        <div className="flex flex-row justify-center flex-wrap mt-2 gap-3 items-center w-full max-w-[900px]">
+        <div className="mt-2 flex w-full max-w-[900px] flex-row flex-wrap items-center justify-center gap-3">
           {[
             "Sharia Banking IT Systems",
             "Core Banking System (CBS)",
@@ -284,7 +287,7 @@ export const Skills = () => {
           ].map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 text-sm rounded-full bg-[#0d948815] border border-[#0d94888b] text-cyan-300 hover:bg-[#0d948830] transition-all"
+              className={`${badgeClass} border border-[#0d94888b] bg-[#0d948815] text-cyan-300 hover:bg-[#0d948830]`}
             >
               {skill}
             </span>
@@ -292,11 +295,11 @@ export const Skills = () => {
         </div>
       </div>
 
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-1] opacity-30 absolute flex items-center justify-center bg-cover">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 hidden opacity-20 lg:block">
+        {inView && (
           <video
-            className="w-full h-auto"
-            preload="false"
+            className="h-full w-full object-cover"
+            preload="metadata"
             playsInline
             loop
             muted
@@ -304,7 +307,7 @@ export const Skills = () => {
           >
             <source src="/videos/skills-bg.webm" type="video/webm" />
           </video>
-        </div>
+        )}
       </div>
     </section>
   );
