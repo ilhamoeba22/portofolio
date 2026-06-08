@@ -1,247 +1,81 @@
 import { FaWhatsapp, FaEnvelope, FaUser, FaFolder, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
-import {
-  RxGithubLogo,
-  RxLinkedinLogo,
-} from "react-icons/rx";
+import { RxGithubLogo, RxLinkedinLogo } from "react-icons/rx";
 
-// ═══ A. BACKEND DEVELOPMENT & FRAMEWORKS ═══
 export const SKILL_DATA = [
-  {
-    skill_name: "PHP",
-    image: "php.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Laravel 11",
-    image: "laravel.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Java",
-    image: "java.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CodeIgniter",
-    image: "codeigniter.svg",
-    width: 65,
-    height: 65,
-  },
+  { skill_name: "PHP", image: "php.svg", width: 80, height: 80 },
+  { skill_name: "Laravel 11", image: "laravel.svg", width: 80, height: 80 },
+  { skill_name: "Java", image: "java.svg", width: 80, height: 80 },
+  { skill_name: "CodeIgniter", image: "codeigniter.svg", width: 65, height: 65 },
 ] as const;
 
 export const SOCIALS = [
-  {
-    name: "LinkedIn",
-    icon: RxLinkedinLogo,
-    link: "https://linkedin.com/in/m-ilhampratama",
-  },
-  {
-    name: "Email",
-    icon: FaEnvelope,
-    link: "mailto:muhammad.ilham.yk@gmail.com",
-  },
-  {
-    name: "WhatsApp",
-    icon: FaWhatsapp,
-    link: "https://wa.me/62895390069595",
-  },
+  { name: "LinkedIn", icon: RxLinkedinLogo, link: "https://linkedin.com/in/m-ilhampratama" },
+  { name: "Email", icon: FaEnvelope, link: "mailto:muhammad.ilham.yk@gmail.com" },
+  { name: "WhatsApp", icon: FaWhatsapp, link: "https://wa.me/62895390069595" },
 ] as const;
 
-// ═══ B. FRONTEND DEVELOPMENT & UI/UX ═══
 export const FRONTEND_SKILL = [
-  {
-    skill_name: "Vue.js 3",
-    image: "vue.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Vite",
-    image: "vite.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Bootstrap",
-    image: "bootstrap.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Alpine.js",
-    image: "alpine.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Livewire",
-    image: "livewire.svg",
-    width: 70,
-    height: 70,
-  },
+  { skill_name: "Vue.js 3", image: "vue.svg", width: 80, height: 80 },
+  { skill_name: "Vite", image: "vite.svg", width: 70, height: 70 },
+  { skill_name: "HTML", image: "html.png", width: 80, height: 80 },
+  { skill_name: "CSS", image: "css.png", width: 80, height: 80 },
+  { skill_name: "JavaScript", image: "js.png", width: 65, height: 65 },
+  { skill_name: "Bootstrap", image: "bootstrap.svg", width: 80, height: 80 },
+  { skill_name: "Tailwind CSS", image: "tailwind.png", width: 80, height: 80 },
+  { skill_name: "Alpine.js", image: "alpine.svg", width: 70, height: 70 },
+  { skill_name: "Livewire", image: "livewire.svg", width: 70, height: 70 },
 ] as const;
 
-// ═══ C. DATABASE MANAGEMENT ═══
 export const BACKEND_SKILL = [
-  {
-    skill_name: "MySQL",
-    image: "mysql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "PostgreSQL",
-    image: "postgresql.png",
-    width: 70,
-    height: 70,
-  },
+  { skill_name: "MySQL", image: "mysql.png", width: 70, height: 70 },
+  { skill_name: "PostgreSQL", image: "postgresql.png", width: 70, height: 70 },
 ] as const;
 
-// ═══ D. TOOLS & DEVOPS ═══
 export const FULLSTACK_SKILL = [
-  {
-    skill_name: "Git",
-    image: "git.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "GitHub",
-    image: "github.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "GitLab",
-    image: "gitlab.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Docker",
-    image: "docker.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "AWS",
-    image: "aws.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "VS Code",
-    image: "vscode.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Laragon",
-    image: "laragon.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Jira",
-    image: "jira.svg",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Postman",
-    image: "postman.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Swagger",
-    image: "swagger.svg",
-    width: 70,
-    height: 70,
-  },
+  { skill_name: "Git", image: "git.svg", width: 70, height: 70 },
+  { skill_name: "GitHub", image: "github.svg", width: 70, height: 70 },
+  { skill_name: "GitLab", image: "gitlab.svg", width: 70, height: 70 },
+  { skill_name: "Docker", image: "docker.png", width: 70, height: 70 },
+  { skill_name: "AWS", image: "aws.svg", width: 80, height: 80 },
+  { skill_name: "VS Code", image: "vscode.svg", width: 70, height: 70 },
+  { skill_name: "Laragon", image: "laragon.svg", width: 70, height: 70 },
+  { skill_name: "Jira", image: "jira.svg", width: 65, height: 65 },
+  { skill_name: "Postman", image: "postman.svg", width: 70, height: 70 },
+  { skill_name: "Swagger", image: "swagger.svg", width: 70, height: 70 },
 ] as const;
 
-// ═══ E. (Not used - handled via text in component) ═══
 export const OTHER_SKILL = [] as const;
 
-// ═══ F. OFFICE PRODUCTIVITY & BUSINESS TOOLS ═══
 export const OFFICE_SKILL = [
-  {
-    skill_name: "Microsoft Excel",
-    image: "excel.svg",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Microsoft Word",
-    image: "word.svg",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Microsoft PowerPoint",
-    image: "powerpoint.svg",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Canva",
-    image: "canva.svg",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Figma",
-    image: "figma.png",
-    width: 50,
-    height: 50,
-  },
+  { skill_name: "Microsoft Excel", image: "excel.svg", width: 65, height: 65 },
+  { skill_name: "Microsoft Word", image: "word.svg", width: 65, height: 65 },
+  { skill_name: "Microsoft PowerPoint", image: "powerpoint.svg", width: 65, height: 65 },
+  { skill_name: "Canva", image: "canva.svg", width: 65, height: 65 },
+  { skill_name: "Figma", image: "figma.png", width: 50, height: 50 },
 ] as const;
 
-// ═══ G. IT SUPPORT & INFRASTRUCTURE ═══
 export const IT_SUPPORT_SKILL = [
-  {
-    skill_name: "Windows",
-    image: "windows.svg",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Linux",
-    image: "linux.svg",
-    width: 65,
-    height: 65,
-  },
+  { skill_name: "Windows", image: "windows.svg", width: 65, height: 65 },
+  { skill_name: "Linux", image: "linux.svg", width: 65, height: 65 },
 ] as const;
 
 export const PROJECTS = [
+  {
+    title: "Dashboard Monitoring System",
+    descriptionKey: "project_dashboard_monitoring_desc",
+    fullDescriptionKey: "project_dashboard_monitoring_full",
+    features: [
+      "Enterprise monitoring dashboard for operational visibility and KPI tracking",
+      "Designed as a centralized control center for management review",
+      "On-going development with modular architecture for future expansion",
+      "Planned real-time data visualization and executive reporting workflow",
+      "Built to support decision-making across internal business operations"
+    ],
+    image: "/projects/dashboard-monitoring.svg",
+    link: null,
+    tech: "Next.js, TypeScript, Tailwind CSS, React, Vercel",
+    status: "On Going",
+  },
   {
     title: "BPRS Front Office System",
     descriptionKey: "project_bprs_fo_desc",
@@ -373,81 +207,34 @@ export const FOOTER_DATA = [
   {
     title: "Connect",
     data: [
-      {
-        name: "LinkedIn",
-        icon: RxLinkedinLogo,
-        link: "https://linkedin.com/in/m-ilhampratama",
-      },
-      {
-        name: "GitHub",
-        icon: RxGithubLogo,
-        link: "https://github.com",
-      },
-      {
-        name: "WhatsApp",
-        icon: FaWhatsapp,
-        link: "https://wa.me/62895390069595",
-      },
+      { name: "LinkedIn", icon: RxLinkedinLogo, link: "https://linkedin.com/in/m-ilhampratama" },
+      { name: "GitHub", icon: RxGithubLogo, link: "https://github.com/ilhamoeba22" },
+      { name: "WhatsApp", icon: FaWhatsapp, link: "https://wa.me/62895390069595" },
     ],
   },
   {
     title: "Contact",
     data: [
-      {
-        name: "Email Me",
-        icon: FaEnvelope,
-        link: "mailto:muhammad.ilham.yk@gmail.com",
-      },
-      {
-        name: "About Me",
-        icon: FaUser,
-        link: "#about-me",
-      },
-      {
-        name: "My Projects",
-        icon: FaFolder,
-        link: "#projects",
-      },
+      { name: "Email Me", icon: FaEnvelope, link: "mailto:muhammad.ilham.yk@gmail.com" },
+      { name: "About Me", icon: FaUser, link: "#about-me" },
+      { name: "My Projects", icon: FaFolder, link: "#projects" },
     ],
   },
   {
     title: "Location",
     data: [
-      {
-        name: "Sleman, Yogyakarta",
-        icon: FaMapMarkerAlt,
-        link: "#contact",
-      },
-      {
-        name: "Indonesia",
-        icon: FaGlobe,
-        link: "#contact",
-      },
+      { name: "Sleman, Yogyakarta", icon: FaMapMarkerAlt, link: "#contact" },
+      { name: "Indonesia", icon: FaGlobe, link: "#contact" },
     ],
   },
 ] as const;
 
 export const NAV_LINKS = [
-  {
-    title: "About",
-    link: "#about-me",
-  },
-  {
-    title: "Skills",
-    link: "#skills",
-  },
-  {
-    title: "Experience",
-    link: "#experience",
-  },
-  {
-    title: "Projects",
-    link: "#projects",
-  },
-  {
-    title: "Contact",
-    link: "#contact",
-  },
+  { title: "About", link: "#about-me" },
+  { title: "Skills", link: "#skills" },
+  { title: "Experience", link: "#experience" },
+  { title: "Projects", link: "#projects" },
+  { title: "Contact", link: "#contact" },
 ] as const;
 
 export const LINKS = {
@@ -459,58 +246,31 @@ export const EXPERIENCES = [
     company: "PT BPRS HIK MCI",
     roleKey: "exp_hik_role",
     period: "Oct 2024 - Present",
-    descriptionKeys: [
-      "exp_hik_desc1",
-      "exp_hik_desc2",
-      "exp_hik_desc3",
-      "exp_hik_desc4",
-      "exp_hik_desc5",
-    ],
+    descriptionKeys: ["exp_hik_desc1", "exp_hik_desc2", "exp_hik_desc3", "exp_hik_desc4", "exp_hik_desc5"],
   },
   {
     company: "PT. JIM",
     roleKey: "exp_jim_role",
     period: "Apr 2024 - May 2024",
-    descriptionKeys: [
-      "exp_jim_desc1",
-      "exp_jim_desc2",
-      "exp_jim_desc3",
-    ],
+    descriptionKeys: ["exp_jim_desc1", "exp_jim_desc2", "exp_jim_desc3"],
   },
   {
     company: "PT Baracipta Esa Engineering",
     roleKey: "exp_msib_ecc_role",
     period: "Aug 2023 - Dec 2023",
-    descriptionKeys: [
-      "exp_msib_ecc_desc1",
-      "exp_msib_ecc_desc2",
-      "exp_msib_ecc_desc3",
-      "exp_msib_ecc_desc4",
-    ],
+    descriptionKeys: ["exp_msib_ecc_desc1", "exp_msib_ecc_desc2", "exp_msib_ecc_desc3", "exp_msib_ecc_desc4"],
   },
   {
     company: "SEAL (Social Economy Accelerator Lab)",
     roleKey: "exp_seal_role",
     period: "Aug 2022 - Dec 2022",
-    descriptionKeys: [
-      "exp_seal_desc1",
-      "exp_seal_desc2",
-      "exp_seal_desc3",
-      "exp_seal_desc4",
-      "exp_seal_desc5",
-    ],
+    descriptionKeys: ["exp_seal_desc1", "exp_seal_desc2", "exp_seal_desc3", "exp_seal_desc4", "exp_seal_desc5"],
   },
   {
     company: "PT. Paragon Technology and Innovation",
     roleKey: "exp_paragon_role",
     period: "Jul 2019 - Dec 2019",
-    descriptionKeys: [
-      "exp_paragon_desc1",
-      "exp_paragon_desc2",
-      "exp_paragon_desc3",
-      "exp_paragon_desc4",
-      "exp_paragon_desc5",
-    ],
+    descriptionKeys: ["exp_paragon_desc1", "exp_paragon_desc2", "exp_paragon_desc3", "exp_paragon_desc4", "exp_paragon_desc5"],
   },
 ] as const;
 
@@ -519,35 +279,11 @@ export const EDUCATION = {
   university: "Universitas Teknologi Digital Indonesia",
   period: "Sep 2020 - Feb 2024",
   certifications: [
-    {
-      name: "Java Programming Fundamentals",
-      issuer: "Dicoding Academy",
-      validity: "Valid until Jan 2027",
-    },
-    {
-      name: "Agile Execution",
-      issuer: "PT Baracipta Esa Engineering",
-      validity: "Certified",
-    },
-    {
-      name: "Effective Communication",
-      issuer: "PT Baracipta Esa Engineering",
-      validity: "Certified",
-    },
-    {
-      name: "Powerful Delivery",
-      issuer: "PT Baracipta Esa Engineering",
-      validity: "Certified",
-    },
-    {
-      name: "AWS Academy Cloud Associate",
-      issuer: "AWS Academy",
-      validity: "Certified",
-    },
-    {
-      name: "MBKM - Full Stack Developer",
-      issuer: "Kampus Merdeka",
-      validity: "Certified",
-    },
+    { name: "Java Programming Fundamentals", issuer: "Dicoding Academy", validity: "Valid until Jan 2027" },
+    { name: "Agile Execution", issuer: "PT Baracipta Esa Engineering", validity: "Certified" },
+    { name: "Effective Communication", issuer: "PT Baracipta Esa Engineering", validity: "Certified" },
+    { name: "Powerful Delivery", issuer: "PT Baracipta Esa Engineering", validity: "Certified" },
+    { name: "AWS Academy Cloud Associate", issuer: "AWS Academy", validity: "Certified" },
+    { name: "MBKM - Full Stack Developer", issuer: "Kampus Merdeka", validity: "Certified" },
   ],
 } as const;
