@@ -77,6 +77,22 @@ export const PROJECTS = [
     status: "On Going",
   },
   {
+    title: "SSO Server MCI",
+    descriptionKey: "project_sso_server_mci_desc",
+    fullDescriptionKey: "project_sso_server_mci_full",
+    features: [
+      "Centralized authentication foundation for internal MCI digital services",
+      "Designed to support single sign-on access across multiple applications",
+      "On-going development focused on identity, access, and session management",
+      "Prepared for secure user verification and role-aware application access",
+      "Built as an enterprise identity layer for future system integration"
+    ],
+    image: "/projects/sso-server-mci.svg",
+    link: null,
+    tech: "Authentication, SSO, Identity Management, API, Security",
+    status: "On Going",
+  },
+  {
     title: "BPRS Front Office System",
     descriptionKey: "project_bprs_fo_desc",
     fullDescriptionKey: "project_bprs_fo_full",
