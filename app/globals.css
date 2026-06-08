@@ -1,26 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Local Inter fallback: if files exist in /public/fonts/inter/, they will be used.
-   If files are missing, the browser will use the fallback system fonts. */
-/* @font-face removed: no woff2 available, using Google Fonts fallback */\n/*\n  font-family: 'InterLocal';\n  src: url('/fonts/inter/Inter-Regular.woff2') format('woff2');\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n*/
-/* @font-face removed: no woff2 available */\n/*\n  font-family: 'InterLocal';\n  src: url('/fonts/inter/Inter-Medium.woff2') format('woff2');\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n*/
-/* @font-face removed: no woff2 available */\n/*\n  font-family: 'InterLocal';\n  src: url('/fonts/inter/Inter-Bold.woff2') format('woff2');\n  font-weight: 700;\n  font-style: normal;\n  font-display: swap;\n*/
-
-/* Base font stack: prefer local Inter if available, otherwise system fonts */
 :root {
-  --font-sans: 'InterLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: var(--font-sans);
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .cursive {
-  font-family: "Cedarville Cursive", cursive;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .Welcome-text {
@@ -44,7 +42,7 @@ body {
   position: relative;
   width: max-content;
   max-width: 100%;
-  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+  transition: 0.35s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
 }
 
 .button-primary {
@@ -59,7 +57,6 @@ body {
   box-shadow: inset 0 0 12px #bf97ff70;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hidden {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -69,25 +66,25 @@ body {
   display: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* ══════════════════════════════════════════════
-   3D Animated Profile Photo Styles
-   ══════════════════════════════════════════════ */
-
 .profile-container {
   position: relative;
-  width: 320px;
-  height: 427px;
-  perspective: 1200px;
+  width: min(72vw, 280px);
+  height: min(96vw, 373px);
+  perspective: 900px;
+}
+
+@media (min-width: 640px) {
+  .profile-container {
+    width: 320px;
+    height: 427px;
+  }
 }
 
 @media (min-width: 768px) {
   .profile-container {
     width: 360px;
     height: 480px;
+    perspective: 1200px;
   }
 }
 
@@ -96,35 +93,9 @@ html {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
-/* ── (Vortex Video Background styles removed for cleaner look) ── */
-
-/* ── Orbiting Particles ── */
-.profile-orbit-ring {
-  position: absolute;
-  inset: -25px;
-  animation: orbitSpin 12s linear infinite;
-}
-
-.profile-orbit-ring-2 {
-  inset: -15px;
-  animation: orbitSpin 8s linear infinite reverse;
-}
-
-@keyframes orbitSpin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ── Removed Orbiting Particle Styles ── */
-
-/* ── Photo — No Frame, Soft Edge Blend ── */
 .profile-photo-mask {
   position: absolute;
   inset: 0;
@@ -155,7 +126,6 @@ html {
   mask-composite: intersect;
 }
 
-/* ── Holographic Overlay — Animated ── */
 .profile-holo-overlay {
   position: absolute;
   inset: 0;
@@ -166,7 +136,7 @@ html {
       transparent 80%,
       rgba(112, 66, 248, 0.05) 100%);
   background-size: 200% 200%;
-  animation: holoShift 4s ease-in-out infinite;
+  animation: holoShift 8s ease-in-out infinite;
   z-index: 1;
   pointer-events: none;
 }
@@ -174,98 +144,76 @@ html {
 @keyframes holoShift {
   0% {
     background-position: 0% 0%;
-    opacity: 0.3;
+    opacity: 0.25;
   }
 
   50% {
     background-position: 100% 100%;
-    opacity: 0.7;
+    opacity: 0.45;
   }
 
   100% {
     background-position: 0% 0%;
-    opacity: 0.3;
+    opacity: 0.25;
   }
 }
 
-/* ── Light Sweep — Beam moving across the photo ── */
-.profile-light-sweep {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.profile-light-sweep::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 40%;
-  height: 200%;
-  background: linear-gradient(90deg,
-      transparent 0%,
-      rgba(255, 255, 255, 0.04) 40%,
-      rgba(255, 255, 255, 0.08) 50%,
-      rgba(255, 255, 255, 0.04) 60%,
-      transparent 100%);
-  transform: rotate(25deg);
-  animation: lightSweep 6s ease-in-out infinite;
-}
-
-@keyframes lightSweep {
-  0% {
-    left: -60%;
-  }
-
-  40% {
-    left: -60%;
-  }
-
-  70% {
-    left: 120%;
-  }
-
-  100% {
-    left: 120%;
-  }
-}
-
-/* ── 3D Shadow / Reflection ── */
 .profile-3d-shadow {
   position: absolute;
-  bottom: -30px;
+  bottom: -26px;
   left: 10%;
   right: 10%;
-  height: 40px;
-  background: radial-gradient(ellipse at 50% 0%, rgba(112, 66, 248, 0.2) 0%, rgba(6, 182, 212, 0.1) 40%, transparent 70%);
-  filter: blur(15px);
-  animation: shadowPulse 10s ease-in-out infinite;
+  height: 36px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(112, 66, 248, 0.16) 0%, rgba(6, 182, 212, 0.08) 40%, transparent 70%);
+  filter: blur(14px);
+  animation: shadowPulse 14s ease-in-out infinite;
   z-index: -1;
   pointer-events: none;
 }
 
 @keyframes shadowPulse {
-
   0%,
   100% {
-    opacity: 0.4;
-    transform: scaleX(0.9);
-  }
-
-  25% {
-    opacity: 0.7;
-    transform: scaleX(1.05);
-  }
-
-  50% {
-    opacity: 0.5;
+    opacity: 0.35;
     transform: scaleX(0.95);
   }
 
-  75% {
-    opacity: 0.8;
-    transform: scaleX(1.1);
+  50% {
+    opacity: 0.55;
+    transform: scaleX(1.05);
+  }
+}
+
+@media (max-width: 767px) {
+  .Welcome-box {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+
+  .profile-3d-wrapper {
+    will-change: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .profile-3d-wrapper,
+  .profile-holo-overlay,
+  .profile-3d-shadow {
+    animation: none !important;
+    transform: none !important;
+    will-change: auto !important;
   }
 }
