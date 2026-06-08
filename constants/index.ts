@@ -9,6 +9,7 @@ export const SKILL_DATA = [
 ] as const;
 
 export const SOCIALS = [
+  { name: "Portfolio", icon: FaGlobe, link: "https://ilhamoeba22.vercel.app/" },
   { name: "LinkedIn", icon: RxLinkedinLogo, link: "https://linkedin.com/in/m-ilhampratama" },
   { name: "Email", icon: FaEnvelope, link: "mailto:muhammad.ilham.yk@gmail.com" },
   { name: "WhatsApp", icon: FaWhatsapp, link: "https://wa.me/62895390069595" },
@@ -223,6 +224,7 @@ export const FOOTER_DATA = [
   {
     title: "Connect",
     data: [
+      { name: "Portfolio", icon: FaGlobe, link: "https://ilhamoeba22.vercel.app/" },
       { name: "LinkedIn", icon: RxLinkedinLogo, link: "https://linkedin.com/in/m-ilhampratama" },
       { name: "GitHub", icon: RxGithubLogo, link: "https://github.com/ilhamoeba22" },
       { name: "WhatsApp", icon: FaWhatsapp, link: "https://wa.me/62895390069595" },
@@ -255,6 +257,7 @@ export const NAV_LINKS = [
 
 export const LINKS = {
   sourceCode: "https://linkedin.com/in/m-ilhampratama",
+  portfolio: "https://ilhamoeba22.vercel.app/",
 };
 
 export const EXPERIENCES = [
@@ -285,7 +288,7 @@ export const EXPERIENCES = [
   {
     company: "PT. Paragon Technology and Innovation",
     roleKey: "exp_paragon_role",
-    period: "Jul 2019 - Dec 2019",
+    period: "Jul 2019 - Jul 2020",
     descriptionKeys: ["exp_paragon_desc1", "exp_paragon_desc2", "exp_paragon_desc3", "exp_paragon_desc4", "exp_paragon_desc5"],
   },
 ] as const;
@@ -294,12 +297,25 @@ export const EDUCATION = {
   degree: "Bachelor of Computer Science (S1) - Informatics",
   university: "Universitas Teknologi Digital Indonesia",
   period: "Sep 2020 - Feb 2024",
+  gpa: "GPA: 3.51 / 4.00",
   certifications: [
+    {
+      name: "Training of TKS and CKPN BPRS 2025",
+      issuer: "HIMBARSI DPW DI Yogyakarta",
+      validity: "Participant • Nov 2025 • No. 200/STF/HIMBARSI/DPW-DIY/XI/2025",
+    },
+    {
+      name: "Basic Sharia Banking - Online Banking Training & Workshop",
+      issuer: "ASBISINDO DPW Jawa Barat & IB Perbankan Syariah",
+      validity: "Participant • Nov 2024 • No. B-166/Bid-PSDI/ASB-JB/XI/2024",
+    },
+    { name: "AWS Academy Cloud Associate", issuer: "AWS Academy", validity: "Certified" },
     { name: "Java Programming Fundamentals", issuer: "Dicoding Academy", validity: "Valid until Jan 2027" },
     { name: "Agile Execution", issuer: "PT Baracipta Esa Engineering", validity: "Certified" },
     { name: "Effective Communication", issuer: "PT Baracipta Esa Engineering", validity: "Certified" },
     { name: "Powerful Delivery", issuer: "PT Baracipta Esa Engineering", validity: "Certified" },
-    { name: "AWS Academy Cloud Associate", issuer: "AWS Academy", validity: "Certified" },
     { name: "MBKM - Full Stack Developer", issuer: "Kampus Merdeka", validity: "Certified" },
+    { name: "Demo Day Finalist", issuer: "SEAL / Kampus Merdeka", validity: "Finalist Certificate" },
+    { name: "Best Team Certificate", issuer: "SEAL / Kampus Merdeka", validity: "Award Certificate" },
   ],
 } as const;
