@@ -1,128 +1,197 @@
-# Muhammad Ilham Pratama | Personal Portfolio (Next.js 16)
+# Muhammad Ilham Pratama — Enterprise Portfolio & Digital CV
 
-<!-- Table of Contents -->
-<details>
-<summary># :notebook_with_decorative_cover: Table of Contents</summary>
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel)
 
-- [#️⃣ Folder Structure](#bangbang-folder-structure)
-- [🚀 Getting Started](#toolbox-getting-started)
-- [⚙️ Tech Stack](#gear-tech-stack)
-- [☁️ Deployment](#cloud-deployment)
-- [📦 Required Packages](#package-required-packages)
+A modern, interactive, bilingual portfolio website for **Muhammad Ilham Pratama**, built to present professional experience, technical skills, enterprise application work, and digital transformation projects in a clean executive-style interface.
 
-</details>
-
-## 📁 Folder Structure
-
-```bash
-space-portfolio/
-├── app/                 # Next.js App Router pages
-├── components/          # React components
-├── constants/           # App constants & config
-├── lib/                 # Utility functions
-├── public/              # Static assets
-├── scripts/             # Build scripts
-├── .gitignore
-├── next.config.js
-├── package.json
-├── tailwind.config.ts
-├── tsconfig.json
-└── README.md
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- **Node.js** 20+ 
-- **Git**
-
-### Local Development
-```bash
-npm install
-npm run dev      # http://localhost:3000
-npm run build    # Production build
-npm run start    # Production server
-npm run lint     # Lint code
-```
-
-## ⚙️ Tech Stack
-
-![React](https://img.shields.io/badge/React-19.2.4-blue)
-![Next.js](https://img.shields.io/badge/Next.js-16.2.4-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3-green)
-![Three.js](https://img.shields.io/badge/Three.js-0.183-orange)
-
-**Key Dependencies:**
-```
-Next.js 16.2.4 (App Router + Turbopack)
-React 19.2.4
-Framer Motion 12.34
-@react-three/fiber & drei (3D)
-Tailwind CSS 3.3
-TypeScript 5
-```
-
-## ☁️ Deployment
-
-### Vercel (Recommended)
-1. Push to GitHub
-2. Connect repo at [vercel.com](https://vercel.com)
-3. Auto-deploys on push to `main`
-4. Framework: **Next.js**
-5. Root: `./`
-6. Build: `npm run build`
-7. Output: `.next`
-
-**Vercel Config (vercel.json):**
-```json
-{
-  \"buildCommand\": \"npm run build\",
-  \"outputDirectory\": \".next\",
-  \"framework\": \"nextjs\"
-}
-```
-
-### Netlify
-1. Connect GitHub repo
-2. Build command: `npm run build`
-3. Publish directory: `.next`
-4. Add `netlify.toml`:
-```
-[build]
-  command = \"npm run build\"
-  publish = \".next\"
-```
-
-### Other Platforms
-| Platform | Build Command | Publish Dir |
-|----------|---------------|-------------|
-| Railway | `npm run build` | `.next` |
-| Render | `npm run build` | `.next` |
-| Docker | See Dockerfile | N/A |
-
-**Production Notes:**
-- Images unoptimized (next.config.js)
-- Static export supported (all pages SSG)
-
-## 📦 Required Packages
-
-**Runtime Dependencies:**
-```bash
-npm i next@16.2.4 react@19.2.4 react-dom@19.2.4
-npm i @react-three/fiber@9.5.0 @react-three/drei@10.7.7 three@0.183.1
-npm i framer-motion@12.34.2 clsx@2.1.1 tailwind-merge@3.5.0
-```
-
-**Dev Dependencies:**
-```bash
-npm i -D typescript@5 @types/react@19.2.14 @types/node@25.3.0
-npm i -D tailwindcss@3.3.0 postcss autoprefixer eslint-config-next@16.1.6
-```
-
-**Environment Variables:** None required.
+This portfolio is designed not only as a personal CV website, but also as a curated showcase of real-world systems, including banking operations platforms, internal enterprise tools, public-facing company portals, monitoring dashboards, and on-going digital infrastructure initiatives.
 
 ---
 
-⭐ **Star this repo if you found it helpful!**  
-🤝 **Deploy anywhere with zero-config!**
+## Overview
+
+This project is a personal portfolio and digital CV application built with **Next.js**, **React**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and 3D visual elements. The website highlights professional identity, domain expertise, work experience, education, certifications, and enterprise portfolio items.
+
+The content supports both **English** and **Indonesian** language modes, allowing the portfolio to be presented professionally to local and international audiences.
+
+---
+
+## Key Highlights
+
+- Executive-style personal portfolio and digital CV
+- Bilingual content support: English and Indonesian
+- Enterprise portfolio section with detailed project modals
+- Project status support for on-going development work
+- Responsive layout for desktop, tablet, and mobile
+- Animated UI interactions using Framer Motion
+- 3D visual experience using React Three Fiber and Drei
+- Optimized for Vercel deployment
+- Clean structure for maintaining project data, translations, and visual assets
+
+---
+
+## Featured Enterprise Portfolio
+
+The portfolio currently showcases several enterprise and professional systems, including:
+
+| Project | Status | Category |
+|---|---|---|
+| Dashboard Monitoring System | On Going | Enterprise Monitoring Dashboard |
+| SSO Server MCI | On Going | Internal Access Platform |
+| BPRS Front Office System | Live | Digital Banking Operations |
+| BPRS Procurement System | Internal | Enterprise Procurement Workflow |
+| BPRS Portal & CMS | Live | Banking Public Website & CMS |
+| The Evidence - Archive Extractor | Internal | Data Archive & Reporting |
+| BPRS RIPLAY System | Live | OJK Product Information Directory |
+| ECC Online Personal Assessment | Private | Assessment Platform Backend |
+| Lost And Found System PT KAI Daop 6 Yogyakarta | Private | Public Service Application |
+| PTJIM Corporate Ecosystem | Live | Corporate Website & Analytics |
+
+---
+
+## Tech Stack
+
+### Frontend & UI
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Icons
+
+### 3D & Visual Layer
+
+- Three.js
+- React Three Fiber
+- Drei
+
+### Tooling
+
+- ESLint
+- PostCSS
+- Autoprefixer
+- Git & GitHub
+- Vercel deployment workflow
+
+---
+
+## Project Structure
+
+```bash
+space-portfolio/
+├── app/                 # Next.js App Router pages and layout
+├── components/          # Main and reusable UI components
+│   ├── main/            # Page sections such as hero, projects, skills, etc.
+│   └── sub/             # Smaller reusable components
+├── constants/           # Portfolio data, project list, links, and translations
+├── context/             # Language context and global language state
+├── lib/                 # Utility functions
+├── public/              # Static assets, icons, and project visuals
+│   └── projects/        # Portfolio project images and SVG covers
+├── scripts/             # Build or maintenance scripts
+├── next.config.js       # Next.js configuration
+├── package.json         # Dependencies and scripts
+├── tailwind.config.ts   # Tailwind configuration
+├── tsconfig.json        # TypeScript configuration
+└── README.md            # Project documentation
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Make sure the following tools are installed:
+
+- Node.js 20 or newer
+- npm
+- Git
+
+### Installation
+
+```bash
+git clone https://github.com/ilhamoeba22/portofolio.git
+cd portofolio
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Open the local development URL in your browser:
+
+```bash
+http://localhost:3000
+```
+
+### Production Build
+
+```bash
+npm run build
+npm run start
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+---
+
+## Deployment
+
+This portfolio is prepared for deployment on **Vercel**.
+
+Recommended Vercel configuration:
+
+```json
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
+}
+```
+
+When connected to GitHub, every push to the configured production branch can trigger an automatic Vercel deployment.
+
+---
+
+## Content Management Notes
+
+Most portfolio content is managed from centralized files:
+
+| File | Purpose |
+|---|---|
+| `constants/index.ts` | Skills, project list, social links, footer links, experience, and education data |
+| `constants/translations.ts` | English and Indonesian text content |
+| `context/LanguageContext.tsx` | Language state and fallback translation handling |
+| `public/projects/` | Project cover images and SVG visuals |
+
+To add a new project, update the `PROJECTS` array in `constants/index.ts`, add the required translation keys, and provide a visual asset under `public/projects/`.
+
+---
+
+## Author
+
+**Muhammad Ilham Pratama**  
+IT Specialist • Backend Engineer • Full Stack Web Developer
+
+- LinkedIn: `linkedin.com/in/m-ilhampratama`
+- GitHub: `github.com/ilhamoeba22`
+- Email: `muhammad.ilham.yk@gmail.com`
+
+---
+
+## License
+
+This project is maintained as a personal portfolio and professional CV website. Reuse of the structure is allowed with proper attribution, but personal content, project descriptions, identity, and branding assets should not be copied without permission.
